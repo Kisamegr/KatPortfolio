@@ -1,32 +1,85 @@
 ---
-title: "Discover your visual creativity"
-summary: "Producing a fictional alien-world exhibition where individual AR works became one live museum experience."
-client: "AR exhibition"
-role: "Producer & AR implementation"
+title: "Discover your Visual Creativity project"
+summary: "Discover your Visual Creativity project 2025 Role : Producer / AR manager Tools : Figjam, 3D blender, Unity / Meadow ( AR ) , Max, Makey Makey /scratch, Illustrator, Photoshop"
+client: "Discover your Visual Creativity project"
+role: "Producer / AR manager"
 year: 2025
-services: ["Production planning", "AR research", "Team coordination", "Unity"]
+services: ["Figjam", "3D blender", "Unity", "Meadow ( AR )", "Max", "Makey Makey /scratch", "Illustrator", "Photoshop"]
 cover:
-  src: "/portfolio-assets/ar-exhibition/ios-photo.jpg"
-  alt: "Phone used to experience the AR exhibition"
+  src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0561.jpg"
+  alt: "AR exhibition image from the Figma board"
 gallery:
-  - src: "/portfolio-assets/ar-exhibition/img-0561.jpg"
-    alt: "Visual from the alien-world exhibition"
+  - { src: "/portfolio-assets/figma-source/shared/hero-background-blur.png", alt: "Shared hero background from the Figma board" }
+  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/ios-photo.jpg", alt: "AR exhibition image" }
+  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0411.png", alt: "AR exhibition image" }
+  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0499.jpg", alt: "AR exhibition image" }
+  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0501.png", alt: "AR exhibition image" }
+  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0503.png", alt: "AR exhibition image" }
+  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0504.jpg", alt: "AR exhibition image" }
+  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/screenshot-2026-01-14-19-57-12.png", alt: "AR exhibition screenshot" }
 featured: true
 order: 2
 ---
 
-## The challenge
+## Brief / Challenge
 
-We were asked to turn separate creative works into a single live, museum-style experience—under a fixed deadline and with several emerging technologies in play. I worked as producer alongside the AR design implementation.
+We were asked to create a group exhibition experience that presented individual design works as part of a fictional alien world, framed as a museum-style installation. The project needed to:
 
-## A production-minded approach
+- Combine multiple individual works into one cohesive experience
+- Use at least two emerging technologies
+- Be functional during a live exhibition
+- Be delivered within a fixed timeframe
 
-Clear communication, a realistic schedule, task ownership and logistics gave the project a dependable rhythm. I set up a shared workflow for asset folders, prefabs, asset bundles, 3D models, audio, animation and publishing, so the creative work could move forward without losing track of the practical details.
+This required both technical experimentation and clear team coordination.
 
-## Bringing the world to life
+## Approach - Production & Technology
 
-Unity was used to build the experience and Meadow made it possible to distribute it through QR codes. The result was an exhibition that let visitors encounter a fictional alien world through their own devices.
+I approached the project with a producer mindset, focusing on structure, communication, and delivery. In parallel, I explored Augmented Reality (AR) as a way to present digital designs in a physical space. Through research and testing, I saw AR as a practical tool for making the exhibition more interactive and accessible, rather than just visually impressive. The creatures on the right picture is what I designed on 3d blender.
 
-## What I learned
+## My role as a Producer
 
-The project made the connection between structure, people and technology especially clear: the best experience only emerges when all three are looked after together.
+Alongside my technical contribution, I acted as the producer for the group project. My responsibilities included:
+
+- Planning the project timeline and setting deadlines
+- Dividing tasks and coordinating responsibilities within the team
+- Organizing logistics, including securing workspaces
+- Keeping the team aligned and focused throughout the process
+- Supporting progress and resolving issues as they came up
+
+This role helped the team stay organized and deliver the project on time.
+
+## Technical Contribution - AR Design Implementation
+
+I was responsible for developing the AR component of the exhibition. After evaluating different tools, I chose:
+
+- Unity to build and control the AR experience
+- Meadow to distribute the experience through QR codes
+
+This setup allowed visitors to access the AR content easily on their own devices. I followed a consistent workflow for each AR experience:
+
+- Structured assets into clear folders
+- Created prefabs and asset bundles in Unity
+- Integrated 3D models, audio, and animations
+- Published each experience through Meadow
+
+This approach ensured consistency and reliability across all designs. On the right side you will see the QR codes i created so people could have interactions on the exhicition ( make sure to download meadow app on your phone so the qr codes can work )
+
+## Result - Live Exhibition & Working prototype
+
+The final outcome was a fully functioning exhibition installation with interactive AR elements.
+
+- Visitors could access and explore designs through their phones
+- The team met all technical and presentation requirements
+- The project was delivered on time
+
+The exhibition demonstrated how clear structure and coordination support creative and technical work.
+
+## Reflection & Learning
+
+Through this project, I strengthened my ability to:
+
+- Coordinate teams and manage shared responsibilities
+- Learn and apply new technologies through hands-on testing
+- Balance creative exploration with practical delivery
+
+This experience reinforced my interest in producer roles, where structure, people, and technology come together to support creative work.

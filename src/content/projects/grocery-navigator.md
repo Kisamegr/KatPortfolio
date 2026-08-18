@@ -1,34 +1,104 @@
 ---
-title: "Accessible grocery-store navigator"
-summary: "A design-thinking project that made grocery shopping easier to navigate for a wider range of people."
-client: "Human centred design project"
+title: "Human centered design project"
+summary: "Human centered design project 2025 Role : Project Manager Tools : FIgma, Miro, Trello Principles : Design Thinking, Accessibility"
+client: "Human centered design project"
 role: "Project Manager"
 year: 2025
-services: ["Design Thinking", "Research synthesis", "Project coordination", "Accessibility"]
+services: ["FIgma", "Miro", "Trello", "Design Thinking", "Accessibility"]
 cover:
-  src: "/portfolio-assets/grocery/img-0988.jpg"
-  alt: "Research material from the accessible grocery-store navigator project"
+  src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0367.png"
+  alt: "Human centered design project image from the Figma board"
 gallery:
-  - src: "/portfolio-assets/grocery/img-0986.jpg"
-    alt: "Project research and ideation material"
-  - src: "/portfolio-assets/grocery/img-0991.jpg"
-    alt: "Team working on the grocery navigator concept"
+  - { src: "/portfolio-assets/figma-source/shared/hero-background-blur.png", alt: "Shared hero background from the Figma board" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0986.jpg", alt: "Grocery navigator project image" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0988.jpg", alt: "Grocery navigator project image" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0989.jpg", alt: "Grocery navigator project image" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0991.jpg", alt: "Grocery navigator project image" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0992.jpg", alt: "Grocery navigator project image" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-00-00.png", alt: "Grocery navigator interface screenshot" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-01-57.png", alt: "Grocery navigator interface screenshot" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-04-59.png", alt: "Grocery navigator interface screenshot" }
+  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-09-41.png", alt: "Grocery navigator interface screenshot" }
 featured: true
 order: 1
 ---
 
-## The brief
+## Brief / Challenge
 
-How might a grocery-store experience feel clearer and more independent for people who need extra support navigating it? I led a design-thinking process that took the team from broad research into a focused, testable concept.
+We were tasked with designing a human-centered digital product by identifying a real user problem through research and solving it through Design Thinking. The project required us to:
 
-## From insight to direction
+- Conduct user interviews
+- Define a meaningful user problem
+- Design and test an accessible digital prototype
+- Iterate based on user feedback
+- Deliver an interactive Figma prototype
 
-The research pointed to three essentials: clarity and transparency, a human sense of partnership, and a credible experience that did not feel corporate. We simplified the concept around finding products by aisle, visual cues, favourites and hands-free voice support.
+Accessibility and inclusive design were core requirements throughout the process.
 
-## Making accessibility part of the process
+## Strategy - Design Thinking Approach
 
-The concept developed through iterative testing. We focused on readability, VoiceOver compatibility, light and dark modes, and an icon-plus-colour system that would not rely on colour alone. My role was to keep the process structured, connect the research to decisions and help the team turn insights into a coherent direction.
+We applied the Design Thinking framework to ensure the solution was grounded in real user needs.
 
-## Reflection
+### Empathize
 
-The project reinforced that accessibility becomes stronger when it is considered from the first question—not treated as a final checklist.
+We conducted interviews with students to understand their daily challenges. A recurring insight emerged: users struggled to find products efficiently in unfamiliar grocery stores, especially when searching for ingredients they regularly use.
+
+### Define
+
+Based on the insights, we formulated a clear human-centered problem statement: **How might we make it easier for people to find their groceries when they visit new stores?** This definition guided all design decisions and kept the project focused on real user needs.
+
+### Ideate (Diverge & Converge)
+
+- Generated ideas through Crazy 8s sketching
+- Grouped ideas using Affinity Mapping
+- Narrowed down concepts through Dot Voting in Miro
+
+This process allowed us to explore broadly, then align as a team on the strongest solution.
+
+## Key Decision - Grocery Store Navigator App
+
+Based on research, ideation, and early feedback, we decided to design a Grocery Store Navigator app. The app helps users:
+
+- Locate products by aisle
+- Use visual cues (colors and icons)
+- Save favorite products and stores
+- Navigate hands-free with voice support
+
+We initially explored combining multiple features, but chose to simplify the scope to focus on clarity, usability, and accessibility.
+
+## Result - Accessible, Iterated Prototype
+
+### Iterative Prototyping & Testing
+
+We tested the prototype with users and continuously improved it based on feedback:
+
+- Organized products by aisles and visual categories
+- Added favorites and clearer notifications
+- Improved language and microcopy for usability
+- Refined layouts using spacing and grid systems
+
+Each iteration directly reflected user input.
+
+### Accessibility Impact
+
+Accessibility shaped the design:
+
+- Clear typography and spacing for readability
+- VoiceOver compatibility and voice navigation
+- Light & Dark mode
+- Icons combined with color for clarity
+
+We considered permanent, temporary, and situational limitations, ensuring the app was inclusive and usable for everyone.
+
+### Final Outcome
+
+The final deliverable was an interactive Figma prototype supported by documented research, testing, and design decisions. The result is a solution that is human-centered, accessible, and practical, improving the grocery shopping experience for a wide range of users.
+
+## My role as a Project Manager
+
+- Planned and coordinated the full Design Thinking process from interviews to final iteration
+- Organized research, insights, and ideation using Miro and Trello
+- Managed the project timeline, priorities, and team coordination
+- Facilitated workshops and alignment moments during ideation and decision-making
+- Synthesized user feedback and guided iteration decisions
+- Ensured accessibility considerations were integrated throughout the design process

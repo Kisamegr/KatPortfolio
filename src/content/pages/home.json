@@ -2,8 +2,8 @@
   "home": {
     "intro": "I build the structure that helps creative teams work together, stay aligned, and deliver ideas on time.",
     "portrait": { "src": "/portfolio-assets/home/portrait.jpg", "alt": "Katerina smiling outdoors" },
-    "primaryCta": { "label": "Explore my work", "href": "/work/" },
+    "primaryCta": { "label": "Button text", "href": "/work/" },
     "secondaryCta": { "label": "Let’s talk", "href": "/contact/" },
-    "featuredHeading": "Latest projects"
+    "featuredHeading": "Latest Projects that reflect my expertise and vision"
   }
 }
