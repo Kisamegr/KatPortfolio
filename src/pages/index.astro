@@ -1,7 +1,7 @@
 ---
 import { getCollection, getEntry } from 'astro:content'; import BaseLayout from '../layouts/BaseLayout.astro'; import ProjectCard from '../components/ProjectCard.astro';
 const site = (await getEntry('settings', 'site'))!; const page = (await getEntry('pages', 'home'))!; const home = page.data.home!; const featured = (await getCollection('projects', ({ data }) => data.featured)).sort((a,b) => a.data.order-b.data.order);
-const base = import.meta.env.BASE_URL;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const portraitSrc = `${base}${home.portrait.src.slice(1)}`;
 const hoverPortraitSrc = home.hoverPortrait ? `${base}${home.hoverPortrait.src.slice(1)}` : undefined;
 const roles = ['Producer', 'Project management', 'Facilitator', 'Project coordination', 'Team alignment & collaboration', 'Project delivery'];

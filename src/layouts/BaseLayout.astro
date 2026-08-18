@@ -7,7 +7,7 @@ const navigation = (await getEntry('pages', 'navigation'))!;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const sharingImage = image ?? site.data.defaultSharingImage;
 const navItems = navigation.data.navigation!.items;
-const base = import.meta.env.BASE_URL;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const isCurrentNavItem = (href: string) => href === '/' ? Astro.url.pathname === base : Astro.url.pathname.startsWith(`${base}${href.slice(1)}`);
 ---
 <!doctype html>

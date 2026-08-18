@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const page = (await getEntry('pages', 'about'))!;
 const about = page.data.about!;
-const base = import.meta.env.BASE_URL;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const portraitSrc = `${base}${about.portrait.src.slice(1)}`;
 const imageBase = `${base}portfolio-assets/figma-source/about/`;
 const stories = [

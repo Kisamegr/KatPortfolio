@@ -1,6 +1,6 @@
 ---
 const { project } = Astro.props;
-const base = import.meta.env.BASE_URL;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const slug = project.id.replace(/\.md$/, '');
 const imageSrc = project.data.cover ? `${base}${project.data.cover.src.slice(1)}` : undefined;
 ---
