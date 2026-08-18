@@ -1,0 +1,41 @@
+media:
+  input: src/assets/uploads
+  output: /src/assets/uploads
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projects
+    filename: "{primary}.md"
+    view: { fields: [title, client, year, featured, order], primary: title, sort: [order, title] }
+    fields:
+      - { name: title, label: Project title, type: string, required: true }
+      - { name: summary, label: Summary, type: text, required: true, description: A concise one- or two-sentence introduction. }
+      - { name: client, label: Client, type: string, required: true }
+      - { name: role, label: Your role, type: string, required: true }
+      - { name: year, label: Year, type: number, required: true }
+      - { name: services, label: Services, type: string, list: true, required: true }
+      - name: cover
+        label: Cover image
+        type: object
+        required: true
+        fields:
+          - { name: src, label: Image, type: image, required: true }
+          - { name: alt, label: Alternative text, type: string, required: true, description: Describe the image for someone who cannot see it. }
+      - name: gallery
+        label: Image gallery
+        type: object
+        list: true
+        fields:
+          - { name: src, label: Image, type: image, required: true }
+          - { name: alt, label: Alternative text, type: string, required: true }
+          - { name: caption, label: Caption, type: string }
+      - { name: externalUrl, label: External project link, type: string, required: false }
+      - { name: featured, label: Show on homepage, type: boolean, default: false }
+      - { name: order, label: Display order, type: number, required: true, description: Lower numbers appear first. }
+      - { name: body, label: Case study, type: rich-text, required: true }
+  - name: pages
+    label: Pages & navigation
+    type: file
+    path: src/content/pages
+    fields: []

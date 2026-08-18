@@ -1,0 +1,11 @@
+{
+  "name": "Kat Andersson",
+  "role": "Independent designer & creative partner",
+  "email": "hello@katandersson.com",
+  "defaultDescription": "Kat Andersson is an independent designer creating warm, useful digital experiences and clear visual systems.",
+  "defaultSharingImage": { "src": "../../assets/uploads/og.png", "alt": "Kat Portfolio graphic with warm editorial shapes" },
+  "socialLinks": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/" },
+    { "label": "Instagram", "url": "https://www.instagram.com/" }
+  ]
+}

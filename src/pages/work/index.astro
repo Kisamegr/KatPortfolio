@@ -1,0 +1,5 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import ProjectCard from '../../components/ProjectCard.astro';
+const projects = (await getCollection('projects')).sort((a,b) => a.data.order-b.data.order);
+---
+<BaseLayout title="Work — Kat Andersson" description="Selected independent design work by Kat Andersson."><section class="shell page-intro"><span class="eyebrow">Selected work</span><h1>Useful, distinctive work for people doing meaningful things.</h1></section><section class="shell section"><div class="project-grid">{projects.map((project) => <ProjectCard {project} />)}</div></section></BaseLayout>
