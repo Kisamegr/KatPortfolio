@@ -1,9 +1,11 @@
 ---
-import { getCollection, getEntry } from 'astro:content'; import { Image } from 'astro:assets'; import BaseLayout from '../layouts/BaseLayout.astro'; import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection, getEntry } from 'astro:content'; import BaseLayout from '../layouts/BaseLayout.astro'; import ProjectCard from '../components/ProjectCard.astro';
 const site = (await getEntry('settings', 'site'))!; const page = (await getEntry('pages', 'home'))!; const home = page.data.home!; const featured = (await getCollection('projects', ({ data }) => data.featured)).sort((a,b) => a.data.order-b.data.order);
 const base = import.meta.env.BASE_URL;
+const portraitSrc = `${base}${home.portrait.src.slice(1)}`;
 ---
 <BaseLayout title={`${site.data.name} — ${site.data.role}`} description={site.data.defaultDescription}>
-  <section class="shell hero"><div class="hero-copy"><span class="eyebrow">{site.data.role}</span><h1>{site.data.name}</h1><p>{home.intro}</p><div class="hero-actions"><a class="button" href={`${base}${home.primaryCta.href.slice(1)}`}>{home.primaryCta.label}</a><a class="button alt" href={`${base}${home.secondaryCta.href.slice(1)}`}>{home.secondaryCta.label}</a></div></div><div class="portrait"><Image src={home.portrait.src} alt={home.portrait.alt} widths={[480, 720]} sizes="(max-width: 700px) 240px, 30vw" /></div></section>
-  <section class="section tint"><div class="shell"><div class="section-heading"><div><span class="eyebrow">Selected work</span><h2>{home.featuredHeading}</h2></div><a href={`${base}work/`}>All work</a></div><div class="project-grid">{featured.map((project) => <ProjectCard {project} />)}</div></div></section>
+  <section class="shell hero"><div class="hero-copy"><span class="eyebrow">Available for opportunities</span><h1>{site.data.name}</h1><p>{home.intro}</p><div class="hero-actions"><a class="button" href={`${base}${home.primaryCta.href.slice(1)}`}>{home.primaryCta.label}</a><a class="text-link" href={`${base}${home.secondaryCta.href.slice(1)}`}>{home.secondaryCta.label} <span aria-hidden="true">↗</span></a></div></div><div class="hero-image"><img src={portraitSrc} alt={home.portrait.alt} /></div></section>
+  <section class="shell role-strip"><span>Producer</span><span>Project management</span><span>Facilitator</span><span>Project coordination</span><span>Team alignment & collaboration</span><span>Project delivery</span></section>
+  <section class="section work-section"><div class="shell"><div class="section-heading"><div><span class="eyebrow">Selected work</span><h2>{home.featuredHeading}</h2></div><a class="text-link" href={`${base}work/`}>All work <span aria-hidden="true">↗</span></a></div><div class="project-grid">{featured.map((project) => <ProjectCard {project} />)}</div></div></section>
 </BaseLayout>

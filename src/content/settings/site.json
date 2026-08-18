@@ -1,11 +1,11 @@
 {
-  "name": "Kat Andersson",
-  "role": "Independent designer & creative partner",
-  "email": "hello@katandersson.com",
-  "defaultDescription": "Kat Andersson is an independent designer creating warm, useful digital experiences and clear visual systems.",
-  "defaultSharingImage": { "src": "../../assets/uploads/og.png", "alt": "Kat Portfolio graphic with warm editorial shapes" },
+  "name": "Katerina.",
+  "role": "Project Coordinator · Stockholm",
+  "email": "katerina.project@gmail.com",
+  "phone": "+46 73 076 07 45",
+  "defaultDescription": "Katerina is a Stockholm-based project coordinator who creates the structure that helps creative work move forward.",
+  "defaultSharingImage": { "src": "/portfolio-assets/home/portrait.jpg", "alt": "Portrait of Katerina" },
   "socialLinks": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/" },
-    { "label": "Instagram", "url": "https://www.instagram.com/" }
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/" }
   ]
 }

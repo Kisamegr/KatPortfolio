@@ -1,9 +1,9 @@
 {
   "home": {
-    "intro": "I help thoughtful teams turn complex ideas into digital experiences people want to return to.",
-    "portrait": { "src": "../../assets/uploads/og.png", "alt": "Abstract Kat Portfolio artwork in warm cream, rust and cobalt" },
-    "primaryCta": { "label": "View selected work", "href": "/work/" },
-    "secondaryCta": { "label": "A little about me", "href": "/about/" },
-    "featuredHeading": "A few things I’ve helped bring into the world"
+    "intro": "I build the structure that helps creative teams work together, stay aligned, and deliver ideas on time.",
+    "portrait": { "src": "/portfolio-assets/home/portrait.jpg", "alt": "Katerina smiling outdoors" },
+    "primaryCta": { "label": "Explore my work", "href": "/work/" },
+    "secondaryCta": { "label": "Let’s talk", "href": "/contact/" },
+    "featuredHeading": "Latest projects"
   }
 }

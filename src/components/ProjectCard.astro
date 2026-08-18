@@ -1,12 +1,12 @@
 ---
-import { Image } from 'astro:assets';
 const { project } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const slug = project.id.replace(/\.md$/, '');
+const imageSrc = project.data.cover ? `${base}${project.data.cover.src.slice(1)}` : undefined;
 ---
 <a class="project-card" href={`${base}work/${slug}/`}>
-  <Image src={project.data.cover.src} alt={project.data.cover.alt} widths={[400, 700]} sizes="(max-width: 700px) 100vw, 50vw" />
+  {project.data.cover && imageSrc ? <img src={imageSrc} alt={project.data.cover.alt} loading="lazy" /> : <div class="project-placeholder" aria-hidden="true">Action<br />Society</div>}
   <span class="eyebrow">{project.data.client} · {project.data.year}</span>
   <h3>{project.data.title}</h3>
-  <p>{project.data.summary}</p>
+  <p>{project.data.summary}</p><span class="card-link">Read case study <span aria-hidden="true">↗</span></span>
 </a>
