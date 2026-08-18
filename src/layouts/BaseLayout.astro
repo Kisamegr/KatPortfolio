@@ -8,6 +8,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 const sharingImage = image ?? site.data.defaultSharingImage;
 const navItems = navigation.data.navigation!.items;
 const base = import.meta.env.BASE_URL;
+const isCurrentNavItem = (href: string) => href === '/' ? Astro.url.pathname === base : Astro.url.pathname.startsWith(`${base}${href.slice(1)}`);
 ---
 <!doctype html>
 <html lang="en">
@@ -26,7 +27,7 @@ const base = import.meta.env.BASE_URL;
     <title>{title}</title>
   </head>
   <body>
-    <header class="shell site-header"><a class="brand" href={base}>{site.data.name}</a><nav class="nav" aria-label="Main navigation">{navItems.map((item) => <a href={`${base}${item.href.slice(1)}`} aria-current={Astro.url.pathname.endsWith(item.href) ? 'page' : undefined}>{item.label}</a>)}</nav></header>
+    <header class="shell site-header"><a class="brand" href={base}>{site.data.name}</a><nav class="nav" aria-label="Main navigation">{navItems.map((item) => <a href={`${base}${item.href.slice(1)}`} aria-current={isCurrentNavItem(item.href) ? 'page' : undefined}>{item.label}</a>)}</nav></header>
     <main><slot /></main>
     <section class="footer-cta"><div class="shell"><span class="eyebrow">Available for opportunities</span><h2>Reach out if you want to build structure that helps creative work move forward.</h2><a class="button" href={`${base}contact/`}>Let’s talk</a></div></section>
     <footer class="shell footer"><span class="brand">{site.data.name}</span><div><a href={`mailto:${site.data.email}`}>Email me</a><a href={`tel:${site.data.phone.replace(/\s/g, '')}`}>{site.data.phone}</a>{site.data.socialLinks.map((link) => <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>)}</div></footer>

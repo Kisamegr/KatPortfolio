@@ -24,6 +24,7 @@ const pages = defineCollection({
     home: z.object({
       intro: z.string().min(1),
       portrait: imageWithAlt,
+      hoverPortrait: imageWithAlt.optional(),
       primaryCta: z.object({ label: z.string(), href: z.string() }),
       secondaryCta: z.object({ label: z.string(), href: z.string() }),
       featuredHeading: z.string().min(1),

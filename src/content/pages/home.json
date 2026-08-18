@@ -1,7 +1,8 @@
 {
   "home": {
     "intro": "I build the structure that helps creative teams work together, stay aligned, and deliver ideas on time.",
-    "portrait": { "src": "/portfolio-assets/home/portrait.jpg", "alt": "Katerina smiling outdoors" },
+    "portrait": { "src": "/portfolio-assets/home/flower-portrait-mono.png", "alt": "Katerina arranging wildflowers" },
+    "hoverPortrait": { "src": "/portfolio-assets/home/flower-portrait-colour.png", "alt": "Katerina arranging wildflowers in colour" },
   "primaryCta": { "label": "View selected work", "href": "/work/" },
     "secondaryCta": { "label": "Let’s talk", "href": "/contact/" },
     "featuredHeading": "Latest Projects that reflect my expertise and vision"
