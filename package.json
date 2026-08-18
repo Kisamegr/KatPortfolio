@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run validate && astro build",
+    "build": "npm run validate && astro build && npm run check:links",
+    "check:links": "node scripts/check-internal-links.mjs",
     "preview": "astro preview",
     "validate": "astro check"
   },

@@ -2,7 +2,7 @@
 title: "Psychological Safety & Communication Styles"
 summary: "Psychological Safety & Communication Styles 2026"
 client: "Team Leadership"
-role: "Co- Facilitator"
+role: "Co-facilitator"
 year: 2026
 services: ["Co-Facilitator", "1h 15min workshop", "6 participants", "Psychological Safety", "Communication", "Team Dynamics"]
 cover:
@@ -34,7 +34,7 @@ We combined our topics around one central question: **How can psychological safe
 
 We designed the workshop as a journey from safety → self-awareness → communication → collaboration. We started with an interactive Never Have I Ever check-in before introducing psychological safety. Participants then completed a psychological-safety self-assessment and reflected on their previous team experiences. From there, we explored different communication styles — including direct vs. indirect, expressive vs. reserved, and fast vs. slower processors — followed by individual and small-group reflection. Finally, we brought both topics together through a collaborative activity and closed with reflection on what participants wanted to take into their next team project.
 
-## My role - Co- Facilitator
+## My role - Co-facilitator
 
 As co-facilitator, I focused particularly on the psychological-safety part of the experience. I contributed to:
 

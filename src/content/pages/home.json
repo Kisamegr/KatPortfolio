@@ -5,6 +5,6 @@
     "hoverPortrait": { "src": "/portfolio-assets/home/flower-portrait-colour.png", "alt": "Katerina arranging wildflowers in colour" },
   "primaryCta": { "label": "View selected work", "href": "/work/" },
     "secondaryCta": { "label": "Let’s talk", "href": "/contact/" },
-    "featuredHeading": "Latest Projects that reflect my expertise and vision"
+    "featuredHeading": "Latest projects that reflect my expertise and vision"
   }
 }

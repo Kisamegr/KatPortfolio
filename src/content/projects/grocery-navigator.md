@@ -1,10 +1,10 @@
 ---
-title: "Human centered design project"
-summary: "Human centered design project 2025 Role : Project Manager Tools : FIgma, Miro, Trello Principles : Design Thinking, Accessibility"
-client: "Human centered design project"
+title: "Grocery Store Navigator"
+summary: "An accessible grocery-navigation concept that helps shoppers find products quickly in unfamiliar stores."
+client: "Grocery Store Navigator"
 role: "Project Manager"
 year: 2025
-services: ["FIgma", "Miro", "Trello", "Design Thinking", "Accessibility"]
+services: ["Figma", "Miro", "Trello", "Design Thinking", "Accessibility"]
 cover:
   src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0367.png"
   alt: "Human centered design project image from the Figma board"

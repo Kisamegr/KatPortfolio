@@ -1,6 +1,6 @@
 media:
-  input: src/assets/uploads
-  output: /src/assets/uploads
+  input: public/portfolio-assets/uploads
+  output: /portfolio-assets/uploads
 content:
   - name: projects
     label: Projects
@@ -26,6 +26,7 @@ content:
         label: Image gallery
         type: object
         list: true
+        required: true
         fields:
           - { name: src, label: Image, type: image, required: true }
           - { name: alt, label: Alternative text, type: string, required: true }
@@ -34,8 +35,122 @@ content:
       - { name: featured, label: Show on homepage, type: boolean, default: false }
       - { name: order, label: Display order, type: number, required: true, description: Lower numbers appear first. }
       - { name: body, label: Case study, type: rich-text, required: true }
-  - name: pages
-    label: Pages & navigation
+  - name: content
+    label: Site content
+    type: group
+    items:
+      - name: home
+        label: Home page
+        type: file
+        path: src/content/pages/home.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - name: home
+            type: object
+            fields:
+              - { name: intro, label: Introduction, type: text, required: true }
+              - name: portrait
+                label: Portrait
+                type: object
+                fields:
+                  - { name: src, label: Image, type: image, required: true }
+                  - { name: alt, label: Alternative text, type: string, required: true }
+              - name: hoverPortrait
+                label: Hover portrait
+                type: object
+                required: false
+                fields:
+                  - { name: src, label: Image, type: image, required: true }
+                  - { name: alt, label: Alternative text, type: string, required: true }
+              - name: primaryCta
+                label: Primary call to action
+                type: object
+                fields:
+                  - { name: label, type: string, required: true }
+                  - { name: href, type: string, required: true }
+              - name: secondaryCta
+                label: Secondary call to action
+                type: object
+                fields:
+                  - { name: label, type: string, required: true }
+                  - { name: href, type: string, required: true }
+              - { name: featuredHeading, label: Featured-work heading, type: string, required: true }
+      - name: about
+        label: About page
+        type: file
+        path: src/content/pages/about.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - name: about
+            type: object
+            fields:
+              - { name: intro, label: Introduction, type: text, required: true }
+              - name: portrait
+                label: Portrait
+                type: object
+                fields:
+                  - { name: src, label: Image, type: image, required: true }
+                  - { name: alt, label: Alternative text, type: string, required: true }
+              - { name: expertise, label: Strengths, type: string, list: true, required: true }
+      - name: contact
+        label: Contact page
+        type: file
+        path: src/content/pages/contact.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - name: contact
+            type: object
+            fields:
+              - { name: heading, type: string, required: true }
+              - { name: intro, type: string, required: true }
+      - name: navigation
+        label: Navigation
+        type: file
+        path: src/content/pages/navigation.json
+        format: json
+        operations: { delete: false }
+        fields:
+          - name: navigation
+            type: object
+            fields:
+              - name: items
+                label: Navigation links
+                type: object
+                list: true
+                required: true
+                fields:
+                  - { name: label, type: string, required: true }
+                  - { name: href, type: string, required: true }
+  - name: settings
+    label: Site settings
     type: file
-    path: src/content/pages
-    fields: []
+    path: src/content/settings/site.json
+    format: json
+    operations: { delete: false }
+    fields:
+      - { name: name, label: Name, type: string, required: true }
+      - { name: role, label: Role, type: string, required: true }
+      - { name: email, label: Email, type: string, required: true }
+      - name: phone
+        label: Telephone
+        type: object
+        fields:
+          - { name: display, label: Display number, type: string, required: true }
+          - { name: dial, label: Dial value, type: string, required: true, description: "International digits only, e.g. +46700557041." }
+      - { name: defaultDescription, label: Default description, type: text, required: true }
+      - name: defaultSharingImage
+        label: Default sharing image
+        type: object
+        fields:
+          - { name: src, label: Image, type: image, required: true }
+          - { name: alt, label: Alternative text, type: string, required: true }
+      - name: socialLinks
+        label: Social links
+        type: object
+        list: true
+        fields:
+          - { name: label, type: string, required: true }
+          - { name: url, type: string, required: true }

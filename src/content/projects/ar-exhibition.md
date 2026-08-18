@@ -1,10 +1,10 @@
 ---
-title: "Discover your Visual Creativity project"
-summary: "Discover your Visual Creativity project 2025 Role : Producer / AR manager Tools : Figjam, 3D blender, Unity / Meadow ( AR ) , Max, Makey Makey /scratch, Illustrator, Photoshop"
-client: "Discover your Visual Creativity project"
-role: "Producer / AR manager"
+title: "Discover Your Visual Creativity"
+summary: "A live AR exhibition that combined individual design work into a cohesive fictional alien-world installation."
+client: "Discover Your Visual Creativity"
+role: "Producer / AR Manager"
 year: 2025
-services: ["Figjam", "3D blender", "Unity", "Meadow ( AR )", "Max", "Makey Makey /scratch", "Illustrator", "Photoshop"]
+services: ["FigJam", "Blender", "Unity", "Meadow (AR)", "Max", "Makey Makey / Scratch", "Illustrator", "Photoshop"]
 cover:
   src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0561.jpg"
   alt: "AR exhibition image from the Figma board"
@@ -34,7 +34,7 @@ This required both technical experimentation and clear team coordination.
 
 ## Approach - Production & Technology
 
-I approached the project with a producer mindset, focusing on structure, communication, and delivery. In parallel, I explored Augmented Reality (AR) as a way to present digital designs in a physical space. Through research and testing, I saw AR as a practical tool for making the exhibition more interactive and accessible, rather than just visually impressive. The creatures on the right picture is what I designed on 3d blender.
+I approached the project with a producer mindset, focusing on structure, communication, and delivery. In parallel, I explored Augmented Reality (AR) as a way to present digital designs in a physical space. Through research and testing, I saw AR as a practical tool for making the exhibition more interactive and accessible, rather than just visually impressive. The creatures shown in the accompanying image were designed in Blender.
 
 ## My role as a Producer
 
@@ -62,7 +62,7 @@ This setup allowed visitors to access the AR content easily on their own devices
 - Integrated 3D models, audio, and animations
 - Published each experience through Meadow
 
-This approach ensured consistency and reliability across all designs. On the right side you will see the QR codes i created so people could have interactions on the exhicition ( make sure to download meadow app on your phone so the qr codes can work )
+This approach ensured consistency and reliability across all designs. The accompanying image shows the QR codes I created so visitors could access the AR interactions during the exhibition. Visitors need the Meadow app on their phones to use the QR codes.
 
 ## Result - Live Exhibition & Working prototype
 

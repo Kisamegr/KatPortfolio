@@ -6,7 +6,7 @@ Open [Pages CMS](https://pagescms.org/) and sign in with the GitHub account that
 
 ## Edit a page
 
-The files in `src/content/pages/` control the homepage, About page, Contact page, and navigation. The shared name, role, email, social links, and SEO defaults are in `src/content/settings/site.json`.
+The CMS has separate **Home page**, **About page**, **Contact page**, **Navigation**, and **Site settings** forms. These control the files in `src/content/pages/` and `src/content/settings/site.json`.
 
 ## Add or reorder a project
 
@@ -14,7 +14,7 @@ Create a new item under **Projects**. Fill every required field, including usefu
 
 ## Prepare images
 
-Upload images through the CMS; they are saved in `src/assets/uploads/` and optimized when the site builds. Use landscape images for project covers where possible, crop intentionally, and keep original files reasonably sized. Alternative text should convey the useful visual information, not merely say “image of”. Captions are optional and can add context not obvious from the image.
+Upload images through the CMS; they are saved in `public/portfolio-assets/uploads/` and served directly by the site. Resize and compress them before uploading, keep only the versions used by the site, and use landscape images for project covers where possible. Alternative text should convey the useful visual information, not merely say “image of”. Captions are optional and can add context not obvious from the image.
 
 ## Recover earlier content
 

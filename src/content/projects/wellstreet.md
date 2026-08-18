@@ -1,10 +1,10 @@
 ---
-title: "Brandsrategy and Storytelling"
-summary: "Brandsrategy and Storytelling 2025 Role : Facilitator Tools : Figjam, figma design, slack"
+title: "Brand Strategy and Storytelling"
+summary: "A brand-strategy and storytelling project for Wellstreet, developed through research, facilitation, and visual design."
 client: "Wellstreet"
 role: "Facilitator & Strategic Contributor"
 year: 2025
-services: ["Figjam", "figma design", "slack"]
+services: ["FigJam", "Figma", "Slack"]
 cover:
   src: "/portfolio-assets/figma-source/case-study-03-wellstreet/wellstreet-asset-7399.jpg"
   alt: "Wellstreet image from the Figma board"

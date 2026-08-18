@@ -41,7 +41,7 @@ Children are growing up surrounded by digital games, while many parents are expe
 
 We were challenged to explore: **What does it mean to raise children in the internet era?** We began with a broad investigation into children’s digital lives, looking at screen time, gaming, online safety, digital habits, and parent–child dynamics. Rather than assuming technology was either good or bad, we used research to understand where parents were actually struggling and where design could create meaningful support.
 
-Our research revealed a recurring tension: parents want their children to enjoy gaming, but often lack the time, knowledge, and confidence to evaluate games and create healthy routines. They often rely on Google, other parents, or intuition — leading to conflicting information and uncertainty. **How might we help parents make informed gaming decisions without creating another control-based solution?** That keeps the important story and removes repetition.
+Our research revealed a recurring tension: parents want their children to enjoy gaming, but often lack the time, knowledge, and confidence to evaluate games and create healthy routines. They often rely on Google, other parents, or intuition — leading to conflicting information and uncertainty. **How might we help parents make informed gaming decisions without creating another control-based solution?**
 
 ## Research Approach
 
@@ -63,11 +63,11 @@ We started broad, exploring how parents navigate children’s digital lives befo
 
 **STRUCTURE** — Parents struggle to manage playtime consistently and often feel they are navigating it alone.
 
-**CONNECTION** — Parents see value in gaming but need support balancing its benefits and risks. Then underneath those three, make the competitor finding visually dominant:
+**CONNECTION** — Parents see value in gaming but need support balancing its benefits and risks.
 
 **THE OPPORTUNITY** — Most existing tools focus on monitoring and restriction. Parents don’t need another tool to control gaming. They need support to understand and guide it.
 
-## Exploring the Solution with Low fidelity prototypes first
+## Exploring the Solution with Low-Fidelity Prototypes
 
 ### 01 Parent–Child Check-in
 
@@ -89,7 +89,7 @@ We tested and compared the concepts against our research findings. The Gaming Gu
 
 Once we selected the Gaming Guide direction, we developed the concept further and tested it with parents to understand what worked, what was unclear, and what they valued most.
 
-These are the 3 strongest findings we identify:
+These are the three strongest findings we identified:
 
 1. **Safety comes first** — Parents wanted clear information about online interaction, risks, and age suitability.
 2. **Trusted information matters** — Parents wanted quick, reliable information and pre-vetted recommendations rather than having to research games themselves.
@@ -111,7 +111,7 @@ Parents wanted support beyond restriction → Playtime planning + conversation p
 
 A guidance-based experience helping parents understand, plan and connect around gaming.
 
-## Beyond the Screen The FAROS Lamp
+## Beyond the Screen: The FAROS Lamp
 
 We extended the experience beyond the app with a physical companion that makes playtime visible to the child. As playtime progresses, the light gradually changes. When the session is nearly over, light and sound provide a gentle signal — supporting smoother transitions without constant parental reminders.
 

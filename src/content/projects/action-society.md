@@ -71,7 +71,7 @@ Based on our research, we developed a strategy combining digital tools with huma
 
 Dashboards & KPI tracking. Multilingual access. Shared calendar. Activity mapping. Social media integration. AI data visualization features. (A version for actors & for residents)
 
-### Facebook, Linkedin, & insta
+### Facebook, LinkedIn and Instagram
 
 Visibility, storytelling, engagement.
 
@@ -109,8 +109,6 @@ We translated Kotter’s model into a phased roadmap for long-term implementatio
 - Collab. visualization, framtidskartan/digital twin integration
 
 6 months - 1 year
-
-**SHARED ACTION**
 
 ## My Contribution
 
