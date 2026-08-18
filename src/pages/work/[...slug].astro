@@ -9,4 +9,46 @@ const currentIndex = projects.findIndex((entry) => entry.id === project.id);
 const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : undefined;
 const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : undefined;
 ---
-<BaseLayout title={`${project.data.title} — Katerina`} description={project.data.summary} image={project.data.cover}><article><section class="shell project-hero"><span class="eyebrow">{project.data.client} · {project.data.year}</span><h1>{project.data.title}</h1><p class="lede">{project.data.summary}</p></section>{project.data.cover && coverSrc && <div class="shell project-cover"><img src={coverSrc} alt={project.data.cover.alt} /></div>}<div class="shell project-body"><dl class="meta"><div><dt>Role</dt><dd>{project.data.role}</dd></div><div><dt>Focus</dt><dd>{project.data.services.join(' · ')}</dd></div><div><dt>Year</dt><dd>{project.data.year}</dd></div></dl><div class="prose"><Content /></div>{project.data.gallery.length > 0 && <div class="gallery">{project.data.gallery.map((image) => <figure><img src={`${base}${image.src.slice(1)}`} alt={image.alt} loading="lazy" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div>}<nav class="project-navigation" aria-label="Project navigation">{previousProject && <a class="text-link" href={`${base}work/${previousProject.id}/`}>Previous Project <span aria-hidden="true">↖</span></a>}{nextProject && <a class="text-link" href={`${base}work/${nextProject.id}/`}>Next Project <span aria-hidden="true">↗</span></a>}</nav></div></article></BaseLayout>
+<BaseLayout title={`${project.data.title} — Katerina`} description={project.data.summary} image={project.data.cover}><article><section class="shell project-hero"><span class="eyebrow">{project.data.client} · {project.data.year}</span><h1>{project.data.title}</h1><p class="lede">{project.data.summary}</p></section>{project.data.cover && coverSrc && <div class="shell project-cover"><img src={coverSrc} alt={project.data.cover.alt} /></div>}<div class="shell project-body"><dl class="meta"><div><dt>Role</dt><dd>{project.data.role}</dd></div><div><dt>Focus</dt><dd>{project.data.services.join(' · ')}</dd></div><div><dt>Year</dt><dd>{project.data.year}</dd></div></dl><div class="project-story" data-project-story><div class="prose"><Content /></div>{project.data.gallery.length > 0 && <div class="gallery" data-gallery>{project.data.gallery.map((image) => <figure><img src={`${base}${image.src.slice(1)}`} alt={image.alt} loading="lazy" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div>}</div><nav class="project-navigation" aria-label="Project navigation">{previousProject && <a class="text-link" href={`${base}work/${previousProject.id}/`}>Previous Project <span aria-hidden="true">↖</span></a>}{nextProject && <a class="text-link" href={`${base}work/${nextProject.id}/`}>Next Project <span aria-hidden="true">↗</span></a>}</nav></div></article></BaseLayout>
+
+<script>
+  const story = document.querySelector('[data-project-story]');
+  const prose = story?.querySelector('.prose');
+  const gallery = story?.querySelector('[data-gallery]');
+
+  if (story && prose && gallery) {
+    const figures = [...gallery.querySelectorAll('figure')];
+    const chapters: HTMLElement[] = [];
+    let chapter: HTMLElement | undefined;
+
+    [...prose.children].forEach((node) => {
+      if (node.matches('h2')) {
+        chapter = document.createElement('section');
+        chapter.className = 'project-chapter';
+        const copy = document.createElement('div');
+        copy.className = 'chapter-copy';
+        chapter.append(copy);
+        chapters.push(chapter);
+        story.insertBefore(chapter, gallery);
+      }
+
+      if (chapter) chapter.querySelector('.chapter-copy')?.append(node);
+    });
+
+    if (chapters.length) {
+      let imageIndex = 0;
+      chapters.forEach((item, index) => {
+        const imagesRemaining = figures.length - imageIndex;
+        const chaptersRemaining = chapters.length - index;
+        const imageCount = Math.ceil(imagesRemaining / chaptersRemaining);
+        const visuals = document.createElement('div');
+        visuals.className = 'chapter-visuals';
+        figures.slice(imageIndex, imageIndex + imageCount).forEach((figure) => visuals.append(figure));
+        imageIndex += imageCount;
+        if (visuals.childElementCount) item.append(visuals);
+      });
+      gallery.setAttribute('hidden', '');
+      story.classList.add('is-enhanced');
+    }
+  }
+</script>
