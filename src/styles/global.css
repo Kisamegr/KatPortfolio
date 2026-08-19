@@ -177,7 +177,7 @@ p {
 }
 .header-inner {
   display: flex;
-  min-height: 108px;
+  min-height: 160px;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
@@ -193,7 +193,7 @@ p {
   text-decoration: none;
 }
 .brand-wordmark {
-  width: clamp(9rem, 12vw, 10.5rem);
+  width: clamp(13.5rem, 18vw, 15.75rem);
   height: auto;
 }
 .nav {
@@ -1056,14 +1056,14 @@ figcaption {
     width: min(1200px, calc(100% - 2rem));
   }
   .header-inner {
-    min-height: 92px;
+    min-height: 128px;
   }
   .brand {
     gap: 0.6rem;
     font-size: 1.48rem;
   }
   .brand-wordmark {
-    width: 8.25rem;
+    width: 12.375rem;
   }
   .menu-toggle {
     display: inline-flex;
@@ -1077,7 +1077,7 @@ figcaption {
   }
   .nav {
     position: fixed;
-    inset: 92px 0 auto;
+    inset: 128px 0 auto;
     display: none;
     flex-direction: column;
     align-items: stretch;
