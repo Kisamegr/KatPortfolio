@@ -20,13 +20,17 @@ const markdown = await createMarkdownProcessor();
 const rendered = await markdown.render(project.body, { frontmatter: project.data });
 const chapters = rendered.metadata.headings.filter((heading) => heading.depth === 2).map((heading) => ({ title: heading.text, id: heading.slug }));
 const chapterHtml = rendered.code.split(/(?=<h2\b)/).filter(Boolean);
-let galleryOffset = 0;
-const chapterImages = chapterHtml.map((_, index) => {
-  const count = Math.ceil((project.data.gallery.length - galleryOffset) / (chapterHtml.length - index));
-  const images = project.data.gallery.slice(galleryOffset, galleryOffset + count);
-  galleryOffset += count;
-  return images;
-});
+const chapterImages = project.data.chapterImages
+  ? chapterHtml.map((_, index) => project.data.chapterImages?.find((entry) => entry.chapter === chapters[index]?.id)?.images ?? [])
+  : (() => {
+      let galleryOffset = 0;
+      return chapterHtml.map((_, index) => {
+        const count = Math.ceil((project.data.gallery.length - galleryOffset) / (chapterHtml.length - index));
+        const images = project.data.gallery.slice(galleryOffset, galleryOffset + count);
+        galleryOffset += count;
+        return images;
+      });
+    })();
 ---
 <BaseLayout title={`${project.data.title} — Katerina`} description={project.data.summary} image={project.data.cover}>
   <article>

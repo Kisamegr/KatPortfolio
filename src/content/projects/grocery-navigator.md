@@ -8,16 +8,25 @@ services: ["Figma", "Miro", "Trello", "Design Thinking", "Accessibility"]
 cover:
   src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0367.png"
   alt: "Human centered design project image from the Figma board"
-gallery:
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0986.jpg", alt: "Grocery navigator project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0988.jpg", alt: "Grocery navigator project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0989.jpg", alt: "Grocery navigator project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0991.jpg", alt: "Grocery navigator project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0992.jpg", alt: "Grocery navigator project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-00-00.png", alt: "Grocery navigator interface screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-01-57.png", alt: "Grocery navigator interface screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-04-59.png", alt: "Grocery navigator interface screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-09-41.png", alt: "Grocery navigator interface screenshot" }
+chapterImages:
+  - chapter: "brief--challenge"
+    images: []
+  - chapter: "strategy---design-thinking-approach"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0986.jpg", alt: "Grocery Store Navigator research material" }
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0988.jpg", alt: "Grocery Store Navigator design-thinking activity" }
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0989.jpg", alt: "Grocery Store Navigator ideation material" }
+  - chapter: "key-decision---grocery-store-navigator-app"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-00-00.png", alt: "Grocery Store Navigator app screen" }
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-01-57.png", alt: "Grocery Store Navigator app screen" }
+  - chapter: "result---accessible-iterated-prototype"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/screenshot-2026-01-14-18-09-41.png", alt: "Grocery Store Navigator final prototype screen" }
+  - chapter: "my-role-as-a-project-manager"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0991.jpg", alt: "Grocery Store Navigator project planning material" }
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0992.jpg", alt: "Grocery Store Navigator project planning material" }
 featured: true
 order: 1
 ---

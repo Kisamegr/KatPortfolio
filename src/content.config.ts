@@ -52,7 +52,11 @@ const projects = defineCollection({
     year: z.coerce.number().int().min(2000),
     services: z.array(z.string().min(1)).min(1),
     cover: imageWithAlt,
-    gallery: z.array(imageWithAlt.extend({ caption: z.string().optional() })).min(1),
+    gallery: z.array(imageWithAlt.extend({ caption: z.string().optional() })).default([]),
+    chapterImages: z.array(z.object({
+      chapter: z.string().min(1),
+      images: z.array(imageWithAlt.extend({ caption: z.string().optional() })),
+    })).optional(),
     externalUrl: z.string().url().optional(),
     featured: z.boolean(),
     order: z.coerce.number().int().min(0),
