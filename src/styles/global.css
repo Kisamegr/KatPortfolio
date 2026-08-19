@@ -195,8 +195,7 @@ p {
 .brand-logo {
   width: 2rem;
   height: 2rem;
-  object-fit: cover;
-  object-position: center 24%;
+  object-fit: contain;
 }
 .nav {
   display: flex;
@@ -366,7 +365,7 @@ p {
   position: absolute;
   inset: 0;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition:
     opacity var(--standard) var(--ease),
     transform 600ms var(--ease);
@@ -377,7 +376,6 @@ p {
 .hero-image:hover .hero-image-colour,
 .hero-image:focus-within .hero-image-colour {
   opacity: 1;
-  transform: scale(1.02);
 }
 .hero-image:hover .hero-image-mono,
 .hero-image:focus-within .hero-image-mono {
@@ -447,7 +445,7 @@ p {
 }
 .project-media img {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition:
     transform 500ms var(--ease),
     filter var(--standard) var(--ease);
@@ -455,7 +453,6 @@ p {
 .project-card:hover .project-media img,
 .project-card:focus-visible .project-media img {
   filter: saturate(1.08);
-  transform: scale(1.035);
 }
 .project-card-copy {
   padding-top: var(--space-3);
@@ -498,7 +495,7 @@ p {
 }
 .home-figma-images img {
   height: clamp(230px, 29vw, 430px);
-  object-fit: cover;
+  object-fit: contain;
 }
 .home-figma-images img:nth-child(2) {
   margin-top: 4rem;
@@ -736,7 +733,7 @@ figcaption {
 .project-neighbour img {
   width: 7rem;
   height: 5rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 .project-neighbour small {
   display: block;
@@ -785,7 +782,7 @@ figcaption {
 }
 .about-portrait img {
   aspect-ratio: 4 / 5;
-  object-fit: cover;
+  object-fit: contain;
 }
 .about-portrait figcaption {
   padding-inline: 0;
@@ -898,11 +895,11 @@ figcaption {
 }
 .story-visuals img {
   height: clamp(18rem, 31vw, 30rem);
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 500ms var(--ease);
 }
 .about-story:hover .story-visuals img {
-  transform: scale(1.025);
+  filter: saturate(1.08);
 }
 .story-number {
   color: var(--pink);
