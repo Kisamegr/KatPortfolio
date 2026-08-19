@@ -1,4 +1,4 @@
-import { readFile, readdir, stat, mkdir, writeFile } from "node:fs/promises";
+import { readFile, readdir, stat, mkdir, rm, writeFile } from "node:fs/promises";
 import { dirname, extname, join, relative } from "node:path";
 import sharp from "sharp";
 
@@ -6,6 +6,7 @@ const root = process.cwd();
 const sourceRoot = join(root, "public");
 const masterRoot = join(root, "src", "assets", "masters");
 const outputRoot = join(sourceRoot, "optimized");
+await rm(outputRoot, { recursive: true, force: true });
 const sourceFiles = [
   ...(await readdir(join(root, "src", "content", "projects")).then((files) =>
     files.map((file) => join(root, "src", "content", "projects", file)),
