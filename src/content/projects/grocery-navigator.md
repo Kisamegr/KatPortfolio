@@ -63,6 +63,15 @@ Based on the insights, we formulated a clear human-centered problem statement: *
 
 This process allowed us to explore broadly, then align as a team on the strongest solution.
 
+## My role as a Project Manager
+
+- Planned and coordinated the full Design Thinking process from interviews to final iteration
+- Organized research, insights, and ideation using Miro and Trello
+- Managed the project timeline, priorities, and team coordination
+- Facilitated workshops and alignment moments during ideation and decision-making
+- Synthesized user feedback and guided iteration decisions
+- Ensured accessibility considerations were integrated throughout the design process
+
 ## Key Decision - Grocery Store Navigator App
 
 Based on research, ideation, and early feedback, we decided to design a Grocery Store Navigator app. The app helps users:
@@ -101,12 +110,3 @@ We considered permanent, temporary, and situational limitations, ensuring the ap
 ### Final Outcome
 
 The final deliverable was an interactive Figma prototype supported by documented research, testing, and design decisions. The result is a solution that is human-centered, accessible, and practical, improving the grocery shopping experience for a wide range of users.
-
-## My role as a Project Manager
-
-- Planned and coordinated the full Design Thinking process from interviews to final iteration
-- Organized research, insights, and ideation using Miro and Trello
-- Managed the project timeline, priorities, and team coordination
-- Facilitated workshops and alignment moments during ideation and decision-making
-- Synthesized user feedback and guided iteration decisions
-- Ensured accessibility considerations were integrated throughout the design process
