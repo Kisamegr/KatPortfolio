@@ -35,9 +35,6 @@ for (const file of sourceFiles) {
 const staticSources = [
   "/portfolio-assets/home/flower-portrait-mono.png",
   "/portfolio-assets/home/flower-portrait-colour.png",
-  "/portfolio-assets/figma-source/shared/img-0569.png",
-  "/portfolio-assets/figma-source/work-index/img-0566.png",
-  "/portfolio-assets/figma-source/shared/img-0368.png",
 ];
 staticSources.forEach((source) => sources.add(source));
 const widths = [640, 1280, 1920];
