@@ -10,7 +10,6 @@ This directory contains the 72 unique raster assets used by the portfolio's prim
 
 ## Shared assets
 
-- [hero-background-blur.png](./shared/hero-background-blur.png) — Figma layers `Hero-BG-blur 1–5`; used by home, work index, and case studies 1–3.
 - [img-0368.png](./shared/img-0368.png), [img-0569.png](./shared/img-0569.png), [img-4606.jpg](./shared/img-4606.jpg) — shared home/work visuals.
 
 ## Work index

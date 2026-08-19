@@ -9,7 +9,6 @@ cover:
   src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0367.png"
   alt: "Human centered design project image from the Figma board"
 gallery:
-  - { src: "/portfolio-assets/figma-source/shared/hero-background-blur.png", alt: "Shared hero background from the Figma board" }
   - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0986.jpg", alt: "Grocery navigator project image" }
   - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0988.jpg", alt: "Grocery navigator project image" }
   - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0989.jpg", alt: "Grocery navigator project image" }

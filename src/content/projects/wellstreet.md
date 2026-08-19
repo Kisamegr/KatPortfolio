@@ -9,7 +9,6 @@ cover:
   src: "/portfolio-assets/figma-source/case-study-03-wellstreet/wellstreet-asset-7399.jpg"
   alt: "Wellstreet image from the Figma board"
 gallery:
-  - { src: "/portfolio-assets/figma-source/shared/hero-background-blur.png", alt: "Shared hero background from the Figma board" }
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0825.jpg", alt: "Wellstreet project image" }
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0826.jpg", alt: "Wellstreet project image" }
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0850.jpg", alt: "Wellstreet project image" }

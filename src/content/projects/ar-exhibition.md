@@ -9,7 +9,6 @@ cover:
   src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0561.jpg"
   alt: "AR exhibition image from the Figma board"
 gallery:
-  - { src: "/portfolio-assets/figma-source/shared/hero-background-blur.png", alt: "Shared hero background from the Figma board" }
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/ios-photo.jpg", alt: "AR exhibition image" }
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0411.png", alt: "AR exhibition image" }
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0499.jpg", alt: "AR exhibition image" }
