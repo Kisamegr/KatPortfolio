@@ -417,6 +417,10 @@ p {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: clamp(1.5rem, 3vw, 3.5rem) 1.25rem;
 }
+.home-project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
 .project-card {
   display: block;
   grid-column: span 5;
@@ -428,6 +432,11 @@ p {
 }
 .project-card:nth-child(3n) {
   grid-column: 3 / span 5;
+}
+.home-project-grid .project-card,
+.home-project-grid .project-card.is-featured,
+.home-project-grid .project-card:nth-child(3n) {
+  grid-column: auto;
 }
 .project-media {
   aspect-ratio: 16 / 10;
