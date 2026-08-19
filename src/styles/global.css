@@ -757,10 +757,10 @@ figcaption {
 /* About and contact */
 .about-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.8fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(17rem, 0.72fr);
   align-items: center;
-  gap: clamp(3rem, 9vw, 10rem);
-  padding-block: var(--space-8);
+  gap: clamp(2.5rem, 5vw, 5rem);
+  padding-block: clamp(4rem, 7vw, 6.5rem);
 }
 .about-hero-copy .eyebrow {
   margin-bottom: var(--space-3);
@@ -772,11 +772,12 @@ figcaption {
   margin-block: var(--space-4) var(--space-5);
 }
 .about-portrait {
+  width: min(100%, 24rem);
   margin: 0;
+  justify-self: end;
 }
 .about-portrait img {
-  aspect-ratio: 4 / 5;
-  object-fit: contain;
+  height: auto;
 }
 .about-portrait figcaption {
   padding-inline: 0;
@@ -787,7 +788,11 @@ figcaption {
   text-transform: uppercase;
 }
 .about-section-heading {
-  margin-bottom: var(--space-6);
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+.about-values,
+.about-capabilities {
+  padding-block: clamp(4rem, 7vw, 6.5rem);
 }
 .about-value-grid,
 .capability-grid {
@@ -855,7 +860,7 @@ figcaption {
   content: "•";
 }
 .about-beyond {
-  padding-bottom: var(--space-8);
+  padding-block: clamp(4rem, 7vw, 6.5rem);
 }
 .about-stories {
   border-top: 1px solid var(--line);
@@ -864,8 +869,8 @@ figcaption {
   display: grid;
   grid-template-columns: minmax(20rem, 1fr) minmax(0, 0.8fr);
   align-items: center;
-  gap: clamp(2.5rem, 9vw, 9rem);
-  padding-block: var(--space-7);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding-block: clamp(3.5rem, 6vw, 5rem);
   border-bottom: 1px solid var(--line);
 }
 .about-story:nth-child(even) {
@@ -882,14 +887,12 @@ figcaption {
 .story-visuals figure {
   margin: 0;
   overflow: hidden;
-  background: var(--navy-deep);
 }
 .story-visuals figure:only-child {
   grid-column: 1 / -1;
 }
 .story-visuals img {
-  height: clamp(18rem, 31vw, 30rem);
-  object-fit: contain;
+  height: auto;
   transition: transform 500ms var(--ease);
 }
 .about-story:hover .story-visuals img {
@@ -1090,7 +1093,10 @@ figcaption {
   }
   .about-hero {
     gap: var(--space-6);
-    padding-block: var(--space-7);
+    padding-block: var(--space-6);
+  }
+  .about-portrait {
+    justify-self: start;
   }
   .about-value-grid,
   .capability-grid {
@@ -1112,14 +1118,13 @@ figcaption {
   }
   .about-story {
     gap: var(--space-4);
-    padding-block: var(--space-6);
+    padding-block: var(--space-5);
   }
   .about-story:nth-child(even) .story-visuals {
     order: 0;
   }
   .story-visuals img {
     height: auto;
-    max-height: 31rem;
   }
   .footer {
     align-items: start;
