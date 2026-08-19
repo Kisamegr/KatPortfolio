@@ -791,20 +791,33 @@ figcaption {
   margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 .capability-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(7rem, 12vw, 10rem);
+  margin-bottom: 0;
   color: var(--pink);
   font-size: clamp(1.4rem, 2.4vw, 2rem);
   letter-spacing: 0.25em;
-  text-align: center;
 }
 .about-values,
 .about-capabilities {
   padding-block: clamp(4rem, 7vw, 6.5rem);
+}
+.about-values {
+  padding-bottom: 0;
+}
+.about-capabilities {
+  padding-top: 0;
 }
 .about-value-grid,
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--line);
+}
+.about-value-grid {
+  grid-template-columns: 1fr;
 }
 .about-value-grid article,
 .capability-grid article {
@@ -821,6 +834,16 @@ figcaption {
   padding-right: 0;
   border-right: 0;
 }
+.about-value-grid article,
+.about-value-grid article:first-child,
+.about-value-grid article:last-child {
+  padding: var(--space-5) 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--line);
+}
+.about-value-grid article:last-child {
+  border-bottom: 0;
+}
 .value-title {
   display: flex;
   align-items: center;
@@ -832,7 +855,8 @@ figcaption {
   object-fit: contain;
 }
 .value-title h3 {
-  font-size: clamp(1.35rem, 2vw, 2rem);
+  white-space: nowrap;
+  font-size: clamp(1.65rem, 2.3vw, 2.35rem);
 }
 .about-value-grid p,
 .capability-grid li {
