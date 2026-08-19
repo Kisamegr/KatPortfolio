@@ -393,16 +393,6 @@ p {
   color: var(--muted);
   font-size: 0.9rem;
 }
-.role-strip span:not(:last-child)::after {
-  display: inline-block;
-  width: 0.25rem;
-  height: 0.25rem;
-  margin-left: 1.6rem;
-  border-radius: 50%;
-  background: var(--pink);
-  content: "";
-  vertical-align: middle;
-}
 .work-section {
   background: var(--navy-soft);
 }
@@ -1018,9 +1008,6 @@ figcaption {
   .hero-image {
     justify-self: start;
     width: min(100%, 460px);
-  }
-  .role-strip span:not(:last-child)::after {
-    display: none;
   }
   .section {
     padding-block: var(--space-7);
