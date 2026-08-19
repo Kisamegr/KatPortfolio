@@ -177,7 +177,7 @@ p {
 }
 .header-inner {
   display: flex;
-  min-height: 78px;
+  min-height: 88px;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
@@ -187,14 +187,14 @@ p {
   align-items: center;
   gap: 0.55rem;
   color: var(--white);
-  font-size: 1.3rem;
+  font-size: 1.42rem;
   font-weight: 760;
   letter-spacing: -0.06em;
   text-decoration: none;
 }
 .brand-logo {
-  width: 2rem;
-  height: 2rem;
+  width: 2.25rem;
+  height: 2.25rem;
   object-fit: contain;
 }
 .nav {
@@ -208,7 +208,7 @@ p {
   min-height: 44px;
   align-items: center;
   color: var(--white);
-  font-size: 0.94rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -959,7 +959,7 @@ figcaption {
     width: min(1200px, calc(100% - 2rem));
   }
   .header-inner {
-    min-height: 70px;
+    min-height: 76px;
   }
   .menu-toggle {
     display: inline-flex;
@@ -973,7 +973,7 @@ figcaption {
   }
   .nav {
     position: fixed;
-    inset: 70px 0 auto;
+    inset: 76px 0 auto;
     display: none;
     flex-direction: column;
     align-items: stretch;
