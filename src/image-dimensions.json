@@ -283,12 +283,12 @@
     "width": 557,
     "height": 830
   },
-  "/portfolio-assets/home/portrait.jpg": {
-    "width": 3024,
-    "height": 4032
-  },
   "/portfolio-assets/figma-source/about/about-photo-7630.jpg": {
     "width": 1106,
     "height": 1660
+  },
+  "/portfolio-assets/home/portrait.jpg": {
+    "width": 3024,
+    "height": 4032
   }
 }

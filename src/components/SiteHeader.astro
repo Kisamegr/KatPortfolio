@@ -12,7 +12,7 @@ const isCurrent = (href: string) => href === '/' ? Astro.url.pathname === base :
       <img class="brand-logo" src={`${base}portfolio-assets/brand/katerina-flower-logo.png`} alt="" />
       <span>{site.data.name}</span>
     </a>
-    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">Menu <span aria-hidden="true">+</span></button>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false"><span data-menu-label>Menu</span> <span aria-hidden="true">+</span></button>
     <nav class="nav" id="primary-navigation" aria-label="Main navigation" data-navigation>
       {navigation.data.navigation!.items.map((item) => <a href={`${base}${item.href.slice(1)}`} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>)}
     </nav>
@@ -22,12 +22,14 @@ const isCurrent = (href: string) => href === '/' ? Astro.url.pathname === base :
 <script>
   const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
   const navigation = document.querySelector<HTMLElement>('[data-navigation]');
+  const label = toggle?.querySelector<HTMLElement>('[data-menu-label]');
   const links = navigation ? [...navigation.querySelectorAll<HTMLAnchorElement>('a')] : [];
   let lastFocused: Element | null = null;
 
   const close = (restoreFocus = false) => {
     if (!toggle || !navigation) return;
     toggle.setAttribute('aria-expanded', 'false');
+    if (label) label.textContent = 'Menu';
     navigation.classList.remove('is-open');
     document.body.classList.remove('menu-open');
     if (restoreFocus && lastFocused instanceof HTMLElement) lastFocused.focus();
@@ -39,6 +41,7 @@ const isCurrent = (href: string) => href === '/' ? Astro.url.pathname === base :
     else {
       lastFocused = document.activeElement;
       toggle.setAttribute('aria-expanded', 'true');
+      if (label) label.textContent = 'Close';
       navigation.classList.add('is-open');
       document.body.classList.add('menu-open');
       links[0]?.focus();
@@ -46,6 +49,18 @@ const isCurrent = (href: string) => href === '/' ? Astro.url.pathname === base :
   });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && navigation?.classList.contains('is-open')) close(true);
+    if (event.key !== 'Tab' || !navigation?.classList.contains('is-open')) return;
+    const focusable = [...navigation.querySelectorAll<HTMLElement>('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])')].filter((item) => !item.hasAttribute('disabled'));
+    const first = focusable[0];
+    const last = focusable.at(-1);
+    if (!first || !last) return;
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
   links.forEach((link) => link.addEventListener('click', () => close()));
 </script>

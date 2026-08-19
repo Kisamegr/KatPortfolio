@@ -12,6 +12,9 @@ const sourceFiles = [
   )),
   join(root, "src", "pages", "index.astro"),
   join(root, "src", "pages", "about.astro"),
+  join(root, "src", "content", "pages", "home.json"),
+  join(root, "src", "content", "pages", "about.json"),
+  join(root, "src", "content", "settings", "site.json"),
 ];
 const sources = new Set();
 for (const file of sourceFiles) {
@@ -31,8 +34,6 @@ for (const file of sourceFiles) {
 const staticSources = [
   "/portfolio-assets/home/flower-portrait-mono.png",
   "/portfolio-assets/home/flower-portrait-colour.png",
-  "/portfolio-assets/home/portrait.jpg",
-  "/portfolio-assets/figma-source/about/about-photo-7630.jpg",
   "/portfolio-assets/figma-source/shared/img-0569.png",
   "/portfolio-assets/figma-source/work-index/img-0566.png",
   "/portfolio-assets/figma-source/shared/img-0368.png",
@@ -65,14 +66,14 @@ for (const source of sources) {
       source.slice(1).replace(new RegExp(`${extname(source)}$`, "i"), ""),
     );
     for (const width of widths) {
-      const output = `${targetBase}-${width}.webp`;
-      await mkdir(dirname(output), { recursive: true });
-      await sharp(input, { animated: false })
-        .resize({ width, withoutEnlargement: true })
-        .webp({ quality: 80, effort: 5 })
-        .toFile(output);
-      outputBytes += (await stat(output)).size;
-      generated++;
+      for (const format of ['webp', 'avif']) {
+        const output = `${targetBase}-${width}.${format}`;
+        await mkdir(dirname(output), { recursive: true });
+        const transformer = sharp(input, { animated: false }).resize({ width, withoutEnlargement: true });
+        await (format === 'avif' ? transformer.avif({ quality: 55, effort: 5 }) : transformer.webp({ quality: 80, effort: 5 })).toFile(output);
+        outputBytes += (await stat(output)).size;
+        generated++;
+      }
     }
   } catch (error) {
     console.warn(`Skipped ${relative(root, input)}: ${error.message}`);

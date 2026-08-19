@@ -1,5 +1,6 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
+import { createMarkdownProcessor } from '@astrojs/markdown-remark';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { projectPath, projectSlug } from '../../utils/project';
 import ResponsiveImage from '../../components/ResponsiveImage.astro';
@@ -10,20 +11,21 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content } = await render(project);
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 const currentIndex = projects.findIndex((entry) => entry.id === project.id);
 const previousProject = currentIndex > 0 ? projects[currentIndex - 1] : undefined;
 const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : undefined;
-const chapterSlug = (value: string) => value.toLowerCase().replace(/[`*_]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-const chapterCounts = new Map<string, number>();
-const chapters = [...project.body.matchAll(/^##\s+(.+)$/gm)].map((match) => {
-  const title = match[1].replace(/\s+#+\s*$/, '');
-  const baseId = chapterSlug(title);
-  const count = chapterCounts.get(baseId) ?? 0;
-  chapterCounts.set(baseId, count + 1);
-  return { title, id: count ? `${baseId}-${count + 1}` : baseId };
+const markdown = await createMarkdownProcessor();
+const rendered = await markdown.render(project.body, { frontmatter: project.data });
+const chapters = rendered.metadata.headings.filter((heading) => heading.depth === 2).map((heading) => ({ title: heading.text, id: heading.slug }));
+const chapterHtml = rendered.code.split(/(?=<h2\b)/).filter(Boolean);
+let galleryOffset = 0;
+const chapterImages = chapterHtml.map((_, index) => {
+  const count = Math.ceil((project.data.gallery.length - galleryOffset) / (chapterHtml.length - index));
+  const images = project.data.gallery.slice(galleryOffset, galleryOffset + count);
+  galleryOffset += count;
+  return images;
 });
 ---
 <BaseLayout title={`${project.data.title} — Katerina`} description={project.data.summary} image={project.data.cover}>
@@ -32,7 +34,7 @@ const chapters = [...project.body.matchAll(/^##\s+(.+)$/gm)].map((match) => {
     <div class="shell project-cover"><ResponsiveImage src={project.data.cover.src} alt={project.data.cover.alt} loading="eager" priority sizes="(min-width: 1200px) 1200px, 100vw" /></div>
     <div class="shell project-body">
       {chapters.length > 0 && <nav class="chapter-navigation" aria-label="On this page"><span>On this page</span><ol>{chapters.map((chapter) => <li><a href={`#${chapter.id}`}>{chapter.title}</a></li>)}</ol></nav>}
-      <div class="project-story" data-project-story><div class="prose"><Content /></div><div class="gallery" data-gallery>{project.data.gallery.map((image) => <figure><ResponsiveImage src={image.src} alt={image.alt} sizes="(min-width: 821px) 42vw, 100vw" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div></div>
+      <div class="project-story" data-project-story>{chapterHtml.map((chapter, index) => <section class="project-chapter"><div class="chapter-copy" set:html={chapter} /><div class="chapter-visuals">{chapterImages[index].map((image) => <figure><ResponsiveImage src={image.src} alt={image.alt} sizes="(min-width: 821px) 42vw, 100vw" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div></section>)}</div>
       <nav class="project-navigation" aria-label="Project navigation">
         {previousProject && <a class="project-neighbour previous" href={`${base}${projectPath(previousProject).slice(1)}`}><ResponsiveImage src={previousProject.data.cover.src} alt="" decorative sizes="160px" /><span><small>← Previous project</small>{previousProject.data.title}</span></a>}
         {nextProject && <a class="project-neighbour next" href={`${base}${projectPath(nextProject).slice(1)}`}><span><small>Next project →</small>{nextProject.data.title}</span><ResponsiveImage src={nextProject.data.cover.src} alt="" decorative sizes="160px" /></a>}
@@ -43,47 +45,13 @@ const chapters = [...project.body.matchAll(/^##\s+(.+)$/gm)].map((match) => {
 
 <script>
   const story = document.querySelector<HTMLElement>('[data-project-story]');
-  const prose = story?.querySelector('.prose');
-  const gallery = story?.querySelector('[data-gallery]');
 
-  if (story && prose && gallery) {
+  if (story) {
     const progress = document.createElement('div');
     progress.className = 'reading-progress';
     progress.setAttribute('aria-hidden', 'true');
     document.body.append(progress);
-    const figures = [...gallery.querySelectorAll('figure')];
-    const chapters: HTMLElement[] = [];
-    let chapter: HTMLElement | undefined;
-
-    [...prose.children].forEach((node) => {
-      if (node.matches('h2')) {
-        chapter = document.createElement('section');
-        chapter.className = 'project-chapter';
-        const copy = document.createElement('div');
-        copy.className = 'chapter-copy';
-        chapter.append(copy);
-        chapters.push(chapter);
-        story.insertBefore(chapter, gallery);
-      }
-
-      if (chapter) chapter.querySelector('.chapter-copy')?.append(node);
-    });
-
-    if (chapters.length) {
-      let imageIndex = 0;
-      chapters.forEach((item, index) => {
-        const imagesRemaining = figures.length - imageIndex;
-        const chaptersRemaining = chapters.length - index;
-        const imageCount = Math.ceil(imagesRemaining / chaptersRemaining);
-        const visuals = document.createElement('div');
-        visuals.className = 'chapter-visuals';
-        figures.slice(imageIndex, imageIndex + imageCount).forEach((figure) => visuals.append(figure));
-        imageIndex += imageCount;
-        if (visuals.childElementCount) item.append(visuals);
-      });
-      gallery.setAttribute('hidden', '');
-      story.classList.add('is-enhanced');
-    }
+    const chapters = [...story.querySelectorAll<HTMLElement>('.project-chapter')];
 
     const updateReadingState = () => {
       const bounds = story.getBoundingClientRect();
