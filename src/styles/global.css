@@ -9,7 +9,7 @@
   --ink: #1b2333;
   --muted: #aeb7c7;
   --pink: #e5a6bd;
-  --lime: #d8ee80;
+  --lime: var(--pink);
   --line: rgba(242, 240, 232, 0.18);
   --space-1: 0.5rem;
   --space-2: 0.75rem;
