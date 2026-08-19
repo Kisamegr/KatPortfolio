@@ -816,9 +816,6 @@ figcaption {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--line);
 }
-.about-value-grid {
-  grid-template-columns: 1fr;
-}
 .about-value-grid article,
 .capability-grid article {
   min-width: 0;
@@ -834,25 +831,10 @@ figcaption {
   padding-right: 0;
   border-right: 0;
 }
-.about-value-grid article,
-.about-value-grid article:first-child,
-.about-value-grid article:last-child {
-  padding: var(--space-5) 0;
-  border-right: 0;
-  border-bottom: 1px solid var(--line);
-}
-.about-value-grid article:last-child {
-  border-bottom: 0;
-}
 .value-title {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-}
-.value-title img {
-  width: 2.2rem;
-  height: 2.2rem;
-  object-fit: contain;
 }
 .value-title h3 {
   white-space: nowrap;
@@ -985,6 +967,21 @@ figcaption {
   position: relative;
   z-index: 1;
   margin-top: var(--space-5);
+}
+@media (min-width: 821px) and (max-width: 1040px) {
+  .about-value-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-value-grid article,
+  .about-value-grid article:first-child,
+  .about-value-grid article:last-child {
+    padding: var(--space-5) 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .about-value-grid article:last-child {
+    border-bottom: 0;
+  }
 }
 
 @media (max-width: 820px) {
