@@ -838,7 +838,7 @@ figcaption {
 }
 .value-title h3 {
   white-space: nowrap;
-  font-size: clamp(1.65rem, 2.3vw, 2.35rem);
+  font-size: clamp(1.4625rem, 2.047vw, 2.1625rem);
 }
 .about-value-grid p,
 .capability-grid li {
