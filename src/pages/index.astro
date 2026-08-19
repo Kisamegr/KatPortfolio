@@ -1,39 +1,15 @@
 ---
-import { getCollection, getEntry } from 'astro:content'; import BaseLayout from '../layouts/BaseLayout.astro'; import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 const site = (await getEntry('settings', 'site'))!; const page = (await getEntry('pages', 'home'))!; const home = page.data.home!; const featured = (await getCollection('projects', ({ data }) => data.featured)).sort((a,b) => a.data.order-b.data.order);
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
-const portraitSrc = `${base}${home.portrait.src.slice(1)}`;
-const hoverPortraitSrc = home.hoverPortrait ? `${base}${home.hoverPortrait.src.slice(1)}` : undefined;
 const roles = ['Producer', 'Project management', 'Facilitator', 'Project coordination', 'Team alignment & collaboration', 'Project delivery'];
 ---
 <BaseLayout title={`${site.data.name} — ${site.data.role}`} description={site.data.defaultDescription}>
-  <section class="shell hero"><img class="hero-background-image" src={`${base}portfolio-assets/figma-source/shared/hero-background-blur.png`} alt="" aria-hidden="true" /><div class="hero-copy"><span class="hero-kicker">Hey, I’m Katerina, a project coordinator based in Stockholm.</span><span class="eyebrow">Available for opportunities</span><h1>{site.data.name}</h1><p>{home.intro}</p><div class="hero-actions"><a class="button" href={`${base}${home.primaryCta.href.slice(1)}`}>{home.primaryCta.label}</a><a class="text-link" href={`${base}${home.secondaryCta.href.slice(1)}`}>{home.secondaryCta.label} <span aria-hidden="true">↗</span></a></div></div><div class="hero-image hero-flower-image"><img class="hero-image-colour" src={hoverPortraitSrc ?? portraitSrc} alt="" aria-hidden="true" /><img class="hero-image-mono" src={portraitSrc} alt={home.portrait.alt} /></div></section>
-  <section class="role-carousel" data-role-carousel aria-label="Areas of expertise"><div class="role-carousel-track"><div class="role-carousel-group">{roles.map((role) => <span>{role}</span>)}</div><div class="role-carousel-group" aria-hidden="true">{roles.map((role) => <span>{role}</span>)}</div></div></section>
-  <section class="section work-section"><div class="shell"><div class="section-heading"><div><span class="eyebrow">Selected work</span><h2>{home.featuredHeading}</h2></div><a class="text-link" href={`${base}work/`}>All work <span aria-hidden="true">↗</span></a></div><div class="project-grid">{featured.map((project) => <ProjectCard {project} />)}</div></div></section>
-  <section class="shell home-figma-images" aria-label="Portfolio images from the source board"><img src={`${base}portfolio-assets/figma-source/shared/img-0569.png`} alt="Portfolio image from the Figma board" loading="lazy" /><img src={`${base}portfolio-assets/figma-source/work-index/img-0566.png`} alt="Portfolio image from the Figma board" loading="lazy" /><img src={`${base}portfolio-assets/figma-source/shared/img-0368.png`} alt="Portfolio image from the Figma board" loading="lazy" /></section>
+  <section class="shell hero"><div class="hero-copy"><span class="hero-kicker">Hey, I’m Katerina, a project coordinator based in Stockholm.</span><span class="availability"><span aria-hidden="true"></span>Available for opportunities</span><p class="hero-statement">{home.intro}</p><h1>{site.data.name}</h1><div class="hero-actions"><a class="button" href={`${base}${home.primaryCta.href.slice(1)}`}>{home.primaryCta.label}</a><a class="text-link" href={`${base}${home.secondaryCta.href.slice(1)}`}>{home.secondaryCta.label} <span aria-hidden="true">↗</span></a></div></div><div class="hero-image hero-flower-image"><ResponsiveImage class="hero-image-colour" src={home.hoverPortrait?.src ?? home.portrait.src} alt="" decorative loading="eager" priority sizes="(min-width: 821px) 48vw, 100vw" /><ResponsiveImage class="hero-image-mono" src={home.portrait.src} alt={home.portrait.alt} loading="eager" priority sizes="(min-width: 821px) 48vw, 100vw" /></div></section>
+  <section class="role-strip" aria-label="Areas of expertise"><div class="shell">{roles.map((role) => <span>{role}</span>)}</div></section>
+  <section class="section work-section"><div class="shell"><div class="section-heading"><div><span class="eyebrow">Selected work</span><h2>{home.featuredHeading}</h2></div><a class="text-link" href={`${base}work/`}>All work <span aria-hidden="true">↗</span></a></div><div class="project-grid">{featured.map((project, index) => <ProjectCard {project} featured={index === 0} />)}</div></div></section>
+  <section class="shell home-figma-images" aria-label="A selection of Katerina’s work"><ResponsiveImage src="/portfolio-assets/figma-source/shared/img-0569.png" alt="Portfolio image from the Figma board" sizes="(min-width: 821px) 38vw, 100vw" /><ResponsiveImage src="/portfolio-assets/figma-source/work-index/img-0566.png" alt="Portfolio image from the Figma board" sizes="(min-width: 821px) 28vw, 100vw" /><ResponsiveImage src="/portfolio-assets/figma-source/shared/img-0368.png" alt="Portfolio image from the Figma board" sizes="(min-width: 821px) 32vw, 100vw" /></section>
 </BaseLayout>
-
-<script>
-  const carousel = document.querySelector<HTMLElement>('[data-role-carousel]');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-  let timer: number | undefined;
-
-  const stop = () => {
-    if (timer) window.clearInterval(timer);
-    timer = undefined;
-  };
-
-  const start = () => {
-    stop();
-    if (!carousel || reduceMotion.matches) return;
-    const speed = 120;
-    timer = window.setInterval(() => {
-      const loopWidth = carousel.scrollWidth / 2;
-      carousel.scrollLeft = (carousel.scrollLeft + speed / 50) % loopWidth;
-    }, 20);
-  };
-
-  start();
-  reduceMotion.addEventListener('change', start);
-</script>

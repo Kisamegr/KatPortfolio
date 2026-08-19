@@ -1,0 +1,12 @@
+---
+import { getEntry } from 'astro:content';
+const site = (await getEntry('settings', 'site'))!;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+<footer class="shell footer">
+  <span class="brand"><img class="brand-logo" src={`${base}portfolio-assets/brand/katerina-flower-logo.png`} alt="" /><span>{site.data.name}</span></span>
+  <div>
+    <a href={`mailto:${site.data.email}`}>Email me</a><a href={`tel:${site.data.phone.dial}`}>{site.data.phone.display}</a>
+    {site.data.socialLinks.map((link) => <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}<span class="sr-only"> (opens in a new tab)</span></a>)}
+  </div>
+</footer>

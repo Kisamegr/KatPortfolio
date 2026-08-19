@@ -1,0 +1,32 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  sizes?: string;
+  loading?: 'eager' | 'lazy';
+  priority?: boolean;
+  decorative?: boolean;
+}
+
+import dimensions from '../image-dimensions.json';
+
+const { src, alt, class: className, sizes = '100vw', loading = 'lazy', priority = false, decorative = false } = Astro.props;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const source = src.replace(/^\//, '');
+const target = source.replace(/\.(jpe?g|png)$/i, '');
+const optimized = (width: number) => `${base}optimized/${target}-${width}.webp`;
+const intrinsic = dimensions[src as keyof typeof dimensions] ?? { width: 1280, height: 960 };
+---
+<img
+  class={className}
+  src={optimized(1280)}
+  srcset={`${optimized(640)} 640w, ${optimized(1280)} 1280w, ${optimized(1920)} 1920w`}
+  sizes={sizes}
+  width={intrinsic.width}
+  height={intrinsic.height}
+  alt={decorative ? '' : alt}
+  loading={loading}
+  decoding="async"
+  fetchpriority={priority ? 'high' : 'auto'}
+/>

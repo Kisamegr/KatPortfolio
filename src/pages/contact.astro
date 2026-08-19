@@ -4,9 +4,9 @@ const page = (await getEntry('pages', 'contact'))!;
 const site = (await getEntry('settings', 'site'))!;
 const contact = page.data.contact!;
 ---
-<BaseLayout title="Connect — Katerina" description={contact.intro}>
+<BaseLayout title="Connect — Katerina" description={contact.intro} hideFooterCta>
   <section class="shell contact">
-    <span class="eyebrow">{contact.intro}</span>
+    <span class="eyebrow">{contact.intro}</span><span class="contact-flower" aria-hidden="true">✿</span>
     <h1>{contact.heading}</h1>
     <a class="email" href={`mailto:${site.data.email}`}>Email me</a>
     <a class="phone" href={`tel:${site.data.phone.dial}`}>{site.data.phone.display}</a>

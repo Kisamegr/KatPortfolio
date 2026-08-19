@@ -1,12 +1,11 @@
 ---
 import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ResponsiveImage from '../components/ResponsiveImage.astro';
 
 const page = (await getEntry('pages', 'about'))!;
 const about = page.data.about!;
-const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
-const portraitSrc = `${base}${about.portrait.src.slice(1)}`;
-const imageBase = `${base}portfolio-assets/figma-source/about/`;
+const imageBase = '/portfolio-assets/figma-source/about/';
 const stories = [
   { title: 'Organizing events', images: ['about-photo-2956.jpg', 'about-photo-2941-1.jpg'], copy: 'I enjoy bringing people together through well-structured, thoughtful experiences. I co-organised a Friendsgiving event with a classmate, where I was responsible for coordination and decoration. The event brought together people from different backgrounds, each contributing traditional dishes and sharing them in a relaxed, welcoming setting. It was rewarding to see how good planning and care can turn a simple idea into a meaningful shared moment.' },
   { title: 'Organising trips and exploring Swedish heritage', images: ['about-photo-4314.jpg'], copy: 'I often organise small trips with friends to explore Sweden’s cultural and natural heritage. Experiencing the country you live in helps build a deeper sense of belonging and openness toward different cultures. Recently, we visited the Ekeby Oak (Ekebyhovseken) in Ekerö — the largest living deciduous tree in Sweden, estimated to be around 500 years old. Standing alone yet enduring, it was a powerful reminder of resilience, presence, and the impact of carving your own path — values I carry both personally and professionally.' },
@@ -16,13 +15,12 @@ const stories = [
 ---
 <BaseLayout title="About — Katerina" description={about.intro}>
   <section class="shell about-hero">
-    <img class="about-hero-background" src={`${imageBase}hero-background-blur.png`} alt="" aria-hidden="true" />
-    <div class="about-hero-copy"><h1 class="about-page-title">About me</h1><p class="lede">{about.intro}</p><a class="text-link" href="#beyond-work">A little beyond work <span aria-hidden="true">↓</span></a></div>
-    <figure class="about-portrait"><img src={portraitSrc} alt={about.portrait.alt} /><figcaption>Project Coordinator · Stockholm</figcaption></figure>
+    <div class="about-hero-copy"><span class="eyebrow">Project coordinator · Stockholm</span><h1 class="about-page-title">About me</h1><p class="lede">{about.intro}</p><a class="text-link" href="#beyond-work">A little beyond work <span aria-hidden="true">↓</span></a></div>
+    <figure class="about-portrait"><ResponsiveImage src={about.portrait.src} alt={about.portrait.alt} loading="eager" priority sizes="(min-width: 821px) 42vw, 100vw" /><figcaption>Project Coordinator · Stockholm</figcaption></figure>
   </section>
   <section class="shell section about-values">
     <div class="about-section-heading about-values-heading"><h2>My values</h2></div>
-    <div class="about-value-grid"><article><div class="value-title"><img src={`${imageBase}image.png`} alt="" aria-hidden="true" /><h3>Structure with Purpose</h3></div><p>I believe structure should support people and creativity, not restrict them. Clear processes and organisation help teams feel safe, aligned and confident to do their best work.</p></article><article><div class="value-title"><img src={`${imageBase}image-02.png`} alt="" aria-hidden="true" /><h3>Accountability and Trust</h3></div><p>I value taking responsibility, following through on commitments and being someone teams can rely on. Accountability builds trust and keeps projects moving forward with clarity.</p></article><article><div class="value-title"><img src={`${imageBase}image-03.png`} alt="" aria-hidden="true" /><h3>Curiosity & Growth</h3></div><p>I’m motivated by curiosity, continuous learning and self-improvement. I value feedback as a tool for growth and enjoy reflecting on my work to improve both myself and the teams I collaborate with.</p></article></div>
+    <div class="about-value-grid"><article><div class="value-title"><ResponsiveImage src={`${imageBase}image.png`} alt="" decorative sizes="48px" /><h3>Structure with Purpose</h3></div><p>I believe structure should support people and creativity, not restrict them. Clear processes and organisation help teams feel safe, aligned and confident to do their best work.</p></article><article><div class="value-title"><ResponsiveImage src={`${imageBase}image-02.png`} alt="" decorative sizes="48px" /><h3>Accountability and Trust</h3></div><p>I value taking responsibility, following through on commitments and being someone teams can rely on. Accountability builds trust and keeps projects moving forward with clarity.</p></article><article><div class="value-title"><ResponsiveImage src={`${imageBase}image-03.png`} alt="" decorative sizes="48px" /><h3>Curiosity & Growth</h3></div><p>I’m motivated by curiosity, continuous learning and self-improvement. I value feedback as a tool for growth and enjoy reflecting on my work to improve both myself and the teams I collaborate with.</p></article></div>
   </section>
   <section class="shell section about-capabilities">
     <div class="about-section-heading capability-heading"><span aria-hidden="true">✦　✦　✦</span></div>
@@ -30,6 +28,6 @@ const stories = [
   </section>
   <section class="shell section about-beyond" id="beyond-work">
     <div class="about-section-heading"><h2 class="about-page-title">Beyond work</h2></div>
-    <div class="about-stories">{stories.map((story, index) => <article class="about-story"><div class="story-visuals">{story.images.map((image) => <figure><img src={`${imageBase}${image}`} alt={story.title} loading="lazy" /></figure>)}</div><div><span class="story-number">0{index + 1}</span><h3>{story.title}</h3><p>{story.copy}</p></div></article>)}</div>
+    <div class="about-stories">{stories.map((story, index) => <article class="about-story"><div class="story-visuals">{story.images.map((image) => <figure><ResponsiveImage src={`${imageBase}${image}`} alt={story.title} sizes="(min-width: 821px) 46vw, 100vw" /></figure>)}</div><div><span class="story-number">0{index + 1}</span><h3>{story.title}</h3><p>{story.copy}</p></div></article>)}</div>
   </section>
 </BaseLayout>

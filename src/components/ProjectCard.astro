@@ -1,13 +1,16 @@
 ---
 import { projectPath } from '../utils/project';
+import ResponsiveImage from './ResponsiveImage.astro';
 
 const { project } = Astro.props;
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
-const imageSrc = `${base}${project.data.cover.src.slice(1)}`;
+const { featured = false, number } = Astro.props;
 ---
-<a class="project-card" href={`${base}${projectPath(project).slice(1)}`}>
-  <img src={imageSrc} alt={project.data.cover.alt} loading="lazy" />
-  <span class="eyebrow">{project.data.client} · {project.data.year}</span>
-  <h3>{project.data.title}</h3>
-  <p>{project.data.summary}</p><span class="card-link">Read case study <span aria-hidden="true">↗</span></span>
+<a class:list={['project-card', { 'is-featured': featured }]} href={`${base}${projectPath(project).slice(1)}`}>
+  <div class="project-media"><ResponsiveImage src={project.data.cover.src} alt={project.data.cover.alt} sizes={featured ? '(min-width: 821px) 66vw, 100vw' : '(min-width: 821px) 42vw, 100vw'} /></div>
+  <div class="project-card-copy">
+    <span class="project-meta">{number && <span class="project-number" aria-hidden="true">{number}</span>}{project.data.client} <span aria-hidden="true">/</span> {project.data.year}</span>
+    <h3>{project.data.title}</h3><p>{project.data.summary}</p>
+    <span class="card-link">Read case study <span aria-hidden="true">↗</span></span>
+  </div>
 </a>
