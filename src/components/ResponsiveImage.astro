@@ -21,5 +21,5 @@ const intrinsic = dimensions[src as keyof typeof dimensions] ?? { width: 1280, h
 <picture>
   <source type="image/avif" srcset={`${optimized(640, 'avif')} 640w, ${optimized(1280, 'avif')} 1280w, ${optimized(1920, 'avif')} 1920w`} sizes={sizes} />
   <source type="image/webp" srcset={`${optimized(640, 'webp')} 640w, ${optimized(1280, 'webp')} 1280w, ${optimized(1920, 'webp')} 1920w`} sizes={sizes} />
-  <img class={className} src={optimized(1280, 'webp')} sizes={sizes} width={intrinsic.width} height={intrinsic.height} alt={decorative ? '' : alt} loading={loading} decoding="async" fetchpriority={priority ? 'high' : 'auto'} />
+  <img class={className} src={optimized(1280, 'webp')} data-full-src={optimized(1920, 'webp')} sizes={sizes} width={intrinsic.width} height={intrinsic.height} alt={decorative ? '' : alt} loading={loading} decoding="async" fetchpriority={priority ? 'high' : 'auto'} />
 </picture>

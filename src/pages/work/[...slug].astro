@@ -35,10 +35,11 @@ const chapterImages = project.data.chapterImages
 <BaseLayout title={`${project.data.title} — Katerina`} description={project.data.summary} image={project.data.cover}>
   <article>
     <section class="shell project-hero"><div><a class="back-link" href={`${base}work/`}><span aria-hidden="true">←</span> Back to work</a><span class="eyebrow">{project.data.client} · {project.data.year}</span><h1>{project.data.title}</h1><p class="lede">{project.data.summary}</p></div><dl class="meta project-meta-panel"><div><dt>Role</dt><dd>{project.data.role}</dd></div><div><dt>Focus</dt><dd>{project.data.services.join(' · ')}</dd></div><div><dt>Year</dt><dd>{project.data.year}</dd></div>{project.data.externalUrl && <div><dt>Link</dt><dd><a href={project.data.externalUrl} target="_blank" rel="noopener noreferrer">Live project <span class="sr-only">(opens in a new tab)</span>↗</a></dd></div>}</dl></section>
-    <div class="shell project-cover"><ResponsiveImage src={project.data.cover.src} alt={project.data.cover.alt} loading="eager" priority sizes="(min-width: 1200px) 1200px, 100vw" /></div>
+    <div class="shell project-cover"><button class="media-lightbox-trigger" type="button" data-lightbox-trigger aria-label={`Open ${project.data.cover.alt} in a larger view`}><ResponsiveImage src={project.data.cover.src} alt={project.data.cover.alt} loading="eager" priority sizes="(min-width: 1200px) 1200px, 100vw" /></button></div>
     <div class="shell project-body">
       {chapters.length > 0 && <nav class="chapter-navigation" aria-label="On this page"><span>On this page</span><ol>{chapters.map((chapter) => <li><a href={`#${chapter.id}`}>{chapter.title}</a></li>)}</ol></nav>}
-      <div class="project-story" data-project-story>{chapterHtml.map((chapter, index) => <section class:list={['project-chapter', { 'has-visuals': chapterImages[index].length > 0 }]}><div class="chapter-copy" set:html={chapter} /><div class="chapter-visuals">{chapterImages[index].map((image) => <figure><ResponsiveImage src={image.src} alt={image.alt} sizes="(min-width: 821px) 42vw, 100vw" />{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div></section>)}</div>
+      <div class="project-story" data-project-story>{chapterHtml.map((chapter, index) => <section class:list={['project-chapter', { 'has-visuals': chapterImages[index].length > 0 }]}><div class="chapter-copy" set:html={chapter} /><div class="chapter-visuals">{chapterImages[index].map((image) => <figure><button class="media-lightbox-trigger" type="button" data-lightbox-trigger aria-label={`Open ${image.alt} in a larger view`}><ResponsiveImage src={image.src} alt={image.alt} sizes="(min-width: 821px) 42vw, 100vw" /></button>{image.caption && <figcaption>{image.caption}</figcaption>}</figure>)}</div></section>)}</div>
+      <dialog class="media-lightbox" data-media-lightbox aria-label="Expanded image preview"><button class="media-lightbox-close" type="button" data-lightbox-close aria-label="Close image preview">×</button><img data-lightbox-image alt="" /></dialog>
       <nav class="project-navigation" aria-label="Project navigation">
         {previousProject && <a class="project-neighbour previous" href={`${base}${projectPath(previousProject).slice(1)}`}><ResponsiveImage src={previousProject.data.cover.src} alt="" decorative sizes="160px" /><span><small>← Previous project</small>{previousProject.data.title}</span></a>}
         {nextProject && <a class="project-neighbour next" href={`${base}${projectPath(nextProject).slice(1)}`}><span><small>Next project →</small>{nextProject.data.title}</span><ResponsiveImage src={nextProject.data.cover.src} alt="" decorative sizes="160px" /></a>}
@@ -68,5 +69,28 @@ const chapterImages = project.data.chapterImages
     };
     updateReadingState();
     window.addEventListener('scroll', updateReadingState, { passive: true });
+  }
+
+  const lightbox = document.querySelector<HTMLDialogElement>('[data-media-lightbox]');
+  if (lightbox) {
+    const preview = lightbox.querySelector<HTMLImageElement>('[data-lightbox-image]');
+    const closeButton = lightbox.querySelector<HTMLButtonElement>('[data-lightbox-close]');
+    const triggers = [...document.querySelectorAll<HTMLButtonElement>('[data-lightbox-trigger]')];
+    let lastTrigger: HTMLButtonElement | null = null;
+
+    const closeLightbox = () => lightbox.close();
+    triggers.forEach((trigger) => trigger.addEventListener('click', () => {
+      const image = trigger.querySelector<HTMLImageElement>('img');
+      if (!image || !preview) return;
+      lastTrigger = trigger;
+      preview.src = image.dataset.fullSrc || image.currentSrc || image.src;
+      preview.alt = image.alt;
+      lightbox.showModal();
+    }));
+    closeButton?.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    lightbox.addEventListener('close', () => lastTrigger?.focus());
   }
 </script>

@@ -718,6 +718,59 @@ figcaption {
 .chapter-visuals figure:only-child {
   grid-column: 1 / -1;
 }
+.media-lightbox-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+.media-lightbox-trigger:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 4px;
+}
+.media-lightbox {
+  width: min(94vw, 80rem);
+  max-width: none;
+  max-height: 92vh;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+.media-lightbox::backdrop {
+  background: rgba(11, 15, 25, 0.72);
+  backdrop-filter: blur(16px);
+}
+.media-lightbox img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 88vh;
+  margin: auto;
+  object-fit: contain;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.42);
+}
+.media-lightbox-close {
+  position: absolute;
+  z-index: 1;
+  top: -2.75rem;
+  right: 0;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid rgba(242, 240, 232, 0.6);
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 1.7rem;
+  line-height: 1;
+  place-items: center;
+  cursor: pointer;
+}
 .project-navigation {
   display: flex;
   justify-content: space-between;
