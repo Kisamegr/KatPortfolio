@@ -694,6 +694,12 @@ figcaption {
   padding-block: var(--space-7);
   border-top: 1px solid var(--line);
 }
+.project-chapter:not(.has-visuals) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.project-chapter:not(.has-visuals) .chapter-copy {
+  max-width: 70rem;
+}
 .project-chapter:first-of-type {
   padding-top: 0;
   border-top: 0;
