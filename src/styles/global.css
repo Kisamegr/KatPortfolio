@@ -326,22 +326,6 @@ p {
   gap: var(--space-4);
   margin-top: var(--space-5);
 }
-.hero-actions .button,
-.hero-actions .text-link {
-  min-height: 54px;
-  padding-inline: 1.65rem;
-  border-radius: 999px;
-  background: var(--paper);
-  color: var(--navy);
-  font-size: 1rem;
-}
-.hero-actions .text-link {
-  border: 1px solid rgba(242, 240, 232, 0.42);
-  background: rgba(242, 240, 232, 0.78);
-}
-.hero-actions .text-link span {
-  color: var(--navy);
-}
 .hero-image {
   position: relative;
   grid-column: 1;
