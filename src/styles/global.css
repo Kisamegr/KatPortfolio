@@ -1118,7 +1118,7 @@ figcaption {
 }
 .contact-detail {
   display: grid;
-  grid-template-columns: minmax(5.5rem, 0.45fr) minmax(0, 1fr) auto;
+  grid-template-columns: 8rem minmax(0, 1fr) auto;
   gap: var(--space-3);
   align-items: baseline;
   padding: var(--space-4) 0;
