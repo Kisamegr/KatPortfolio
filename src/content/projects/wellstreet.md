@@ -1,6 +1,6 @@
 ---
 title: "Brand Strategy and Storytelling"
-summary: "A brand-strategy and storytelling project for Wellstreet, developed through research, facilitation, and visual design."
+summary: "A brand-strategy and storytelling project for Wellstreet, developed through research, facilitation, and visual design. Deliverables: Brandbook · Website Prototype · Google Slides Template."
 client: "Wellstreet"
 role: "Facilitator & Strategic Contributor"
 year: 2025
@@ -25,11 +25,9 @@ chapterImages:
   - chapter: "building-the-brand-system"
     images: []
   - chapter: "bringing-the-brand-to-life"
-    images:
-      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-31-14.png", alt: "Wellstreet brand application" }
+    images: []
   - chapter: "my-role---facilitator--strategic-contributor"
-    images:
-      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-33-33.png", alt: "Wellstreet project contribution" }
+    images: []
   - chapter: "reflection--learning"
     images: []
 featured: true
@@ -81,7 +79,7 @@ The selected direction was developed into a cohesive brand system, translating t
 
 Professional, approachable and straightforward — designed to communicate expertise without losing warmth or honesty.
 
-![Wellstreet tone-of-voice guidelines](/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-24-29.png)
+![Wellstreet tone-of-voice guidelines](/portfolio-assets/project-story/wellstreet-tone-of-voice.png)
 
 ### 02 — Typography + Colour
 
@@ -101,7 +99,7 @@ Real people and real environments bring a more human and transparent expression 
 
 Motion extends the identity digitally, using the angle of the Wellstreet slash to create a recognisable visual language.
 
-![Wellstreet motion guidelines](/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-22-19.png)
+![Wellstreet motion guidelines](/portfolio-assets/project-story/wellstreet-motion.png)
 
 ## Bringing the Brand to Life
 
@@ -111,13 +109,13 @@ Beyond the brandbook, we applied the new identity across two key touchpoints to 
 
 The website brings the brand strategy, visual identity, tone of voice, and motion together into a cohesive digital experience.
 
+![Wellstreet website prototype](/portfolio-assets/project-story/wellstreet-website-prototype.png)
+
 ### 02 — Google Slides
 
 The presentation template extends the identity into everyday communication, creating a consistent system for presenting Wellstreet to different audiences.
 
-**3 DELIVERABLES**
-
-Brandbook · Website Prototype · Google Slides Template
+![Wellstreet Google Slides template](/portfolio-assets/project-story/wellstreet-google-slides.png)
 
 ## My role - Facilitator & Strategic Contributor
 
