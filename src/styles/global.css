@@ -246,21 +246,21 @@ p {
 .footer-cta {
   margin-top: var(--space-8);
   padding-block: var(--space-6);
-  background: #dedbd0;
-  color: var(--ink);
+  background: #202a40;
+  color: var(--white);
 }
 .footer-cta h2 {
   max-width: 16ch;
   margin: 0 0 var(--space-4);
 }
 .footer-cta .button {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--lime);
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--ink);
 }
 .footer-cta .button:hover {
   background: transparent;
-  color: var(--ink);
+  color: var(--white);
 }
 .footer {
   display: flex;
