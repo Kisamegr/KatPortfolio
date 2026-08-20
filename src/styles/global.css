@@ -245,13 +245,13 @@ p {
 }
 .footer-cta {
   margin-top: var(--space-8);
-  padding-block: var(--space-8);
+  padding-block: var(--space-6);
   background: #dedbd0;
   color: var(--ink);
 }
 .footer-cta h2 {
   max-width: 16ch;
-  margin: 0 0 var(--space-5);
+  margin: 0 0 var(--space-4);
 }
 .footer-cta .button {
   background: var(--ink);
