@@ -18,7 +18,7 @@ const contact = page.data.contact!;
         <p>I’m based in Stockholm and always happy to connect about collaborative, creative work.</p>
       </div>
       <div class="contact-details">
-        <a class="contact-detail" href={`mailto:${site.data.email}`}><span class="contact-detail-label">Email</span><strong>{site.data.email}</strong><span aria-hidden="true">↗</span></a>
+        <a class="contact-detail contact-detail-email" href={`mailto:${site.data.email}`}><span class="contact-detail-label">Email</span><strong>{site.data.email}</strong><span aria-hidden="true">↗</span></a>
         <a class="contact-detail" href={`tel:${site.data.phone.dial}`}><span class="contact-detail-label">Phone</span><strong>{site.data.phone.display}</strong><span aria-hidden="true">↗</span></a>
         {site.data.socialLinks.map((link) => <a class="contact-detail" href={link.url} target="_blank" rel="noopener noreferrer"><span class="contact-detail-label">Social</span><strong>{link.label}</strong><span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>)}
       </div>

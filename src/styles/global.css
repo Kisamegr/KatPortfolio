@@ -1144,6 +1144,10 @@ figcaption {
   letter-spacing: -0.035em;
   overflow-wrap: anywhere;
 }
+.contact-detail-email strong {
+  font-size: clamp(1rem, 1.9vw, 1.65rem);
+  letter-spacing: -0.05em;
+}
 .contact-detail > span[aria-hidden="true"] {
   color: var(--pink);
   font-size: 1.35rem;
