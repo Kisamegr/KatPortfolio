@@ -8,15 +8,27 @@ services: ["FigJam", "Blender", "Unity", "Meadow (AR)", "Max", "Makey Makey / Sc
 cover:
   src: "/portfolio-assets/project-covers/exhibition-digital-development.png"
   alt: "Black-and-white photograph of the digital development exhibition installation"
-gallery:
-  - { src: "/portfolio-assets/project-story/ar-exhibition-team.png", alt: "The exhibition team standing among the Memory Garden installation" }
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/ios-photo.jpg", alt: "AR exhibition image" }
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0411.png", alt: "AR exhibition image" }
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0499.jpg", alt: "AR exhibition image" }
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0501.png", alt: "AR exhibition image" }
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0503.png", alt: "AR exhibition image" }
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0504.jpg", alt: "AR exhibition image" }
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/screenshot-2026-01-14-19-57-12.png", alt: "AR exhibition screenshot" }
+chapterImages:
+  - chapter: "brief--challenge"
+    images:
+      - { src: "/portfolio-assets/project-story/ar-exhibition-team.png", alt: "The exhibition team standing among the Memory Garden installation" }
+  - chapter: "approach---production--technology"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0411.png", alt: "AR exhibition concept image" }
+  - chapter: "my-role-as-a-producer"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/screenshot-2026-01-14-19-57-12.png", alt: "AR exhibition project planning board" }
+  - chapter: "technical-contribution---ar-design-implementation"
+    images:
+      - { src: "/portfolio-assets/project-story/ar-exhibition-ar-cube.png", alt: "Reflective cube AR installation placed in a meadow" }
+  - chapter: "result---live-exhibition--working-prototype"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0499.jpg", alt: "AR exhibition installation" }
+      - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0501.png", alt: "AR exhibition installation" }
+      - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0504.jpg", alt: "AR exhibition installation" }
+      - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0503.png", alt: "AR exhibition installation" }
+  - chapter: "reflection--learning"
+    images: []
 featured: true
 order: 2
 ---

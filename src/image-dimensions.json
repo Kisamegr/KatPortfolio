@@ -71,13 +71,17 @@
     "width": 1220,
     "height": 1182
   },
-  "/portfolio-assets/figma-source/case-study-02-ar-exhibition/ios-photo.jpg": {
-    "width": 2250,
-    "height": 3000
-  },
   "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0411.png": {
     "width": 1255,
     "height": 575
+  },
+  "/portfolio-assets/figma-source/case-study-02-ar-exhibition/screenshot-2026-01-14-19-57-12.png": {
+    "width": 2764,
+    "height": 1362
+  },
+  "/portfolio-assets/project-story/ar-exhibition-ar-cube.png": {
+    "width": 480,
+    "height": 480
   },
   "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0499.jpg": {
     "width": 256,
@@ -87,17 +91,13 @@
     "width": 512,
     "height": 512
   },
-  "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0503.png": {
-    "width": 576,
-    "height": 576
-  },
   "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0504.jpg": {
     "width": 256,
     "height": 256
   },
-  "/portfolio-assets/figma-source/case-study-02-ar-exhibition/screenshot-2026-01-14-19-57-12.png": {
-    "width": 2764,
-    "height": 1362
+  "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0503.png": {
+    "width": 576,
+    "height": 576
   },
   "/portfolio-assets/project-covers/faros.png": {
     "width": 928,
