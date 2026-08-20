@@ -1,6 +1,6 @@
 ---
 title: "Brand Strategy and Storytelling"
-summary: "A brand-strategy and storytelling project for Wellstreet, developed through research, facilitation, and visual design. Deliverables: Brandbook · Website Prototype · Google Slides Template."
+summary: "A brand-strategy and storytelling project for Wellstreet, developed through research, facilitation, and visual design.\nDeliverables: Brandbook · Website Prototype · Google Slides Template."
 client: "Wellstreet"
 role: "Facilitator & Strategic Contributor"
 year: 2025

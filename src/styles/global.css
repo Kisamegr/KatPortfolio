@@ -709,6 +709,9 @@ figcaption {
 .chapter-copy h2 {
   margin-top: 0;
 }
+.lede {
+  white-space: pre-line;
+}
 .chapter-copy > p > img {
   margin-top: var(--space-3);
   background: var(--navy-deep);
