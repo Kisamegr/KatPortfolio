@@ -846,6 +846,23 @@ figcaption {
 .about-hero-copy .lede {
   margin-block: var(--space-4) var(--space-5);
 }
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+.about-actions .button {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--ink);
+}
+.about-actions .text-link {
+  color: var(--white);
+}
+.about-actions .text-link span {
+  color: var(--pink);
+}
 .about-portrait {
   width: min(100%, 24rem);
   margin: 0;
@@ -864,6 +881,73 @@ figcaption {
 }
 .about-section-heading {
   margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+.about-intro-section {
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+}
+.about-intro-section .about-section-heading h2 {
+  max-width: 18ch;
+}
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.about-pillars article {
+  min-width: 0;
+  padding: var(--space-5);
+  border-right: 1px solid var(--line);
+}
+.about-pillars article:first-child {
+  padding-left: 0;
+}
+.about-pillars article:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+.about-pillars span {
+  color: var(--pink);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+}
+.about-pillars h3 {
+  margin: var(--space-2) 0 var(--space-3);
+  font-size: clamp(1.6rem, 2.3vw, 2.25rem);
+}
+.about-pillars p,
+.about-practice > div > p {
+  margin: 0;
+  color: var(--muted);
+}
+.about-practice {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(20rem, 1.15fr);
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: start;
+  padding: clamp(3rem, 6vw, 5rem);
+  background: var(--navy-soft);
+}
+.about-practice h2 {
+  margin: var(--space-2) 0 var(--space-4);
+  font-size: clamp(2rem, 3.3vw, 3.5rem);
+}
+.about-practice-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+.about-practice-lists h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.45rem;
+}
+.about-practice-lists ul {
+  margin: 0;
+}
+.about-practice-lists li {
+  color: var(--muted);
 }
 .capability-heading {
   display: flex;
@@ -1044,9 +1128,13 @@ figcaption {
   margin-top: var(--space-5);
 }
 @media (min-width: 821px) and (max-width: 1040px) {
+  .about-pillars,
   .about-value-grid {
     grid-template-columns: 1fr;
   }
+  .about-pillars article,
+  .about-pillars article:first-child,
+  .about-pillars article:last-child,
   .about-value-grid article,
   .about-value-grid article:first-child,
   .about-value-grid article:last-child {
@@ -1054,8 +1142,13 @@ figcaption {
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
+  .about-pillars article:last-child,
   .about-value-grid article:last-child {
     border-bottom: 0;
+  }
+  .about-practice {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
   }
 }
 
@@ -1200,10 +1293,22 @@ figcaption {
   .about-portrait {
     justify-self: start;
   }
+  .about-intro-section {
+    padding-block: var(--space-7);
+  }
+  .about-pillars,
+  .about-practice,
+  .about-practice-lists,
   .about-value-grid,
   .capability-grid {
     grid-template-columns: 1fr;
   }
+  .about-pillars {
+    margin-top: var(--space-5);
+  }
+  .about-pillars article,
+  .about-pillars article:first-child,
+  .about-pillars article:last-child,
   .about-value-grid article,
   .capability-grid article,
   .about-value-grid article:first-child,
@@ -1214,9 +1319,17 @@ figcaption {
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
+  .about-pillars article:last-child,
   .about-value-grid article:last-child,
   .capability-grid article:last-child {
     border-bottom: 0;
+  }
+  .about-practice {
+    gap: var(--space-6);
+    padding: var(--space-5) var(--space-4);
+  }
+  .about-practice-lists {
+    gap: var(--space-5);
   }
   .about-story {
     gap: var(--space-4);
