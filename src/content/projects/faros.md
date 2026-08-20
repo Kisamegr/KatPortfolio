@@ -9,6 +9,7 @@ cover:
   src: "/portfolio-assets/project-covers/faros.png"
   alt: "FAROS app displayed on a phone held at a kitchen table"
 gallery:
+  - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-next-to-ipad.jpg", alt: "FAROS concept displayed beside an iPad" }
   - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-asset-14032.jpg", alt: "FAROS project image" }
   - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-06.png", alt: "FAROS screenshot" }
   - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-33.png", alt: "FAROS screenshot" }

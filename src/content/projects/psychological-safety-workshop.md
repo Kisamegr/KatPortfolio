@@ -9,6 +9,7 @@ cover:
   src: "/portfolio-assets/project-covers/psychological-safety-workshop.png"
   alt: "Presentation slide introducing the psychological safety and communication styles workshop"
 gallery:
+  - { src: "/portfolio-assets/figma-source/case-study-05-workshop/workshop-photo-8809.jpg", alt: "Psychological safety workshop materials" }
   - { src: "/portfolio-assets/figma-source/case-study-05-workshop/workshop-photo-8850.jpg", alt: "Psychological safety workshop image" }
 featured: false
 order: 5

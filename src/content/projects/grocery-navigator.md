@@ -10,7 +10,8 @@ cover:
   alt: "Lumo app displayed on a phone held in a hand"
 chapterImages:
   - chapter: "brief--challenge"
-    images: []
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0367.png", alt: "Grocery Store Navigator concept board" }
   - chapter: "strategy---design-thinking-approach"
     images:
       - { src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0986.jpg", alt: "Grocery Store Navigator research material" }

@@ -9,6 +9,7 @@ cover:
   src: "/portfolio-assets/project-covers/action-society.png"
   alt: "Action Society change-management plan presentation slide"
 gallery:
+  - { src: "/portfolio-assets/figma-source/case-study-07-action-society/action-society-ai-key-visual-upscaled.png", alt: "Action Society change-management key visual" }
   - { src: "/portfolio-assets/figma-source/case-study-07-action-society/action-society-ai-key-visual.png", alt: "Action Society key visual" }
   - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-16-19-18-00.png", alt: "Action Society screenshot" }
   - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-16-19-18-58.png", alt: "Action Society screenshot" }
