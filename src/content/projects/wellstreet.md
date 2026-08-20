@@ -9,7 +9,7 @@ cover:
   src: "/portfolio-assets/project-covers/wellstreet.png"
   alt: "Wellstreet website displayed on a laptop by a window"
 gallery:
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/wellstreet-asset-7399.jpg", alt: "Wellstreet brand strategy visual" }
+  - { src: "/portfolio-assets/project-story/wellstreet-workshop.png", alt: "Wellstreet project team working together in a workshop" }
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0825.jpg", alt: "Wellstreet project image" }
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0826.jpg", alt: "Wellstreet project image" }
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0850.jpg", alt: "Wellstreet project image" }

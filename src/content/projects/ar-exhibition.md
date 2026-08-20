@@ -9,7 +9,7 @@ cover:
   src: "/portfolio-assets/project-covers/exhibition-digital-development.png"
   alt: "Black-and-white photograph of the digital development exhibition installation"
 gallery:
-  - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0561.jpg", alt: "Digital development exhibition installation" }
+  - { src: "/portfolio-assets/project-story/ar-exhibition-team.png", alt: "The exhibition team standing among the Memory Garden installation" }
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/ios-photo.jpg", alt: "AR exhibition image" }
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0411.png", alt: "AR exhibition image" }
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0499.jpg", alt: "AR exhibition image" }
