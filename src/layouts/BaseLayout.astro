@@ -37,7 +37,7 @@ const { hideFooterCta = false } = Astro.props;
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <SiteHeader />
     <main id="main-content"><slot /></main>
-    {!hideFooterCta && <section class="footer-cta"><div class="shell"><span class="eyebrow">Available for opportunities</span><h2>Reach out if you want to build structure that helps creative work move forward.</h2><a class="button" href={`${base}contact/`}>Let’s talk</a></div></section>}
+    {!hideFooterCta && <section class="footer-cta"><div class="shell"><h2>Reach out if you want to build structure that helps creative work move forward.</h2><a class="button" href={`${base}contact/`}>Let’s talk</a></div></section>}
     <SiteFooter />
   </body>
 </html>

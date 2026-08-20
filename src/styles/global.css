@@ -244,15 +244,12 @@ p {
 .footer-cta {
   margin-top: var(--space-8);
   padding-block: var(--space-8);
-  background: var(--paper);
+  background: #dedbd0;
   color: var(--ink);
-}
-.footer-cta .eyebrow {
-  color: #8b4064;
 }
 .footer-cta h2 {
   max-width: 16ch;
-  margin: var(--space-3) 0 var(--space-5);
+  margin: 0 0 var(--space-5);
 }
 .footer-cta .button {
   background: var(--ink);
