@@ -28,7 +28,8 @@ chapterImages:
     images:
       - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-17-09-05-05.png", alt: "Action Society change strategy" }
   - chapter: "turning-the-framework-into-action"
-    images: []
+    images:
+      - { src: "/portfolio-assets/project-story/action-society-action-roadmap.png", alt: "Action Society long-term change roadmap" }
   - chapter: "my-contribution"
     images:
       - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-17-19-33-33.png", alt: "Action Society project coordination" }
