@@ -8,45 +8,64 @@ services: ["13 weeks", "4 people", "Parents of children aged 6–10", "Research 
 cover:
   src: "/portfolio-assets/project-covers/faros.png"
   alt: "FAROS app displayed on a phone held at a kitchen table"
-gallery:
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-next-to-ipad.jpg", alt: "FAROS concept displayed beside an iPad" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-asset-14032.jpg", alt: "FAROS project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-06.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-33.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-49.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-12-13-19-53.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-12-13-20-02.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-12-13-20-08.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-17-11-24-50.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-21-39-20.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-21-39-49.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-22-21-01.png", alt: "FAROS screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-22-25-12.png", alt: "FAROS screenshot" }
+chapterImages:
+  - chapter: "project-overview"
+    images: []
+  - chapter: "brief"
+    images: []
+  - chapter: "challenge"
+    images: []
+  - chapter: "my-role---project-coordinator--producer--research-lead--ux-strategy"
+    images: []
+  - chapter: "research"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-17-11-24-50.png", alt: "FAROS research approach" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-21-39-49.png", alt: "FAROS quantitative research" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-21-39-20.png", alt: "FAROS qualitative analysis" }
+  - chapter: "exploring-the-solution-with-low-fidelity-prototypes"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-asset-14032.jpg", alt: "FAROS low-fidelity prototype" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-06.png", alt: "FAROS low-fidelity prototype" }
+  - chapter: "testing--iteration"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-33.png", alt: "FAROS testing insight" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-49.png", alt: "FAROS testing insight" }
+  - chapter: "refining-the-concept"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-12-13-19-53.png", alt: "FAROS refined concept" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-12-13-20-02.png", alt: "FAROS refined concept" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-12-13-20-08.png", alt: "FAROS refined concept" }
+  - chapter: "meet-faros"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-22-21-01.png", alt: "FAROS parent app" }
+  - chapter: "beyond-the-screen-the-faros-lamp"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-22-25-12.png", alt: "FAROS lamp concept" }
+  - chapter: "outcome--reflection"
+    images: []
 featured: false
 order: 6
 ---
 
 ## Project Overview
 
-FAROS — A digital and physical guidance system helping parents navigate their children’s gaming with more clarity, structure, and connection.
-
-Course: Digital Development  
-Duration: 13 weeks  
-Team: 4 people  
-Target group: Parents of children aged 6–10  
-My role: Research Lead · Project Coordination · Concept Development · Testing · Documentation
-
 Children are growing up surrounded by digital games, while many parents are expected to make decisions about safety, content, playtime, and online interaction without fully understanding the games themselves. Over 13 weeks, we explored how design could support parents without creating another restrictive parental-control tool. The outcome was FAROS — a guidance-based experience combining a parent app with a physical companion designed to support both parent and child.
 
-## Challenge
+## Brief
 
 We were challenged to explore: **What does it mean to raise children in the internet era?** We began with a broad investigation into children’s digital lives, looking at screen time, gaming, online safety, digital habits, and parent–child dynamics. Rather than assuming technology was either good or bad, we used research to understand where parents were actually struggling and where design could create meaningful support.
 
-Our research revealed a recurring tension: parents want their children to enjoy gaming, but often lack the time, knowledge, and confidence to evaluate games and create healthy routines. They often rely on Google, other parents, or intuition — leading to conflicting information and uncertainty. **How might we help parents make informed gaming decisions without creating another control-based solution?**
+## Challenge
 
-## Research Approach
+Our research revealed a recurring tension: parents want their children to enjoy gaming, but often lack the time, knowledge, and confidence to evaluate games and create healthy routines. They often rely on Google, other parents, or intuition — leading to conflicting information and uncertainty. **How might we help parents make informed gaming decisions without creating another control-based solution?** That keeps the important story and removes repetition.
 
-### Research
+## My role - Project Coordinator / Producer · Research Lead · UX Strategy
+
+I led the research direction while helping coordinate the project from research to final delivery. I planned workflows, organised tasks and priorities, tracked deadlines, and helped keep the team aligned. I also contributed to research synthesis, concept development, prototyping, testing, documentation, and the final pitch. My focus was keeping the process moving while ensuring our decisions remained grounded in user needs.
+
+## Research
+
+### Research Approach
 
 We started broad, exploring how parents navigate children’s digital lives before narrowing our focus to online gaming. To understand both behaviours and attitudes, we combined different research methods: 9 parent interviews · 36 survey responses · social media research · desk research · competitor analysis.
 
@@ -115,10 +134,6 @@ A guidance-based experience helping parents understand, plan and connect around 
 ## Beyond the Screen: The FAROS Lamp
 
 We extended the experience beyond the app with a physical companion that makes playtime visible to the child. As playtime progresses, the light gradually changes. When the session is nearly over, light and sound provide a gentle signal — supporting smoother transitions without constant parental reminders.
-
-## My role - Project Coordinator / Producer · Research Lead · UX Strategy
-
-I led the research direction while helping coordinate the project from research to final delivery. I planned workflows, organised tasks and priorities, tracked deadlines, and helped keep the team aligned. I also contributed to research synthesis, concept development, prototyping, testing, documentation, and the final pitch. My focus was keeping the process moving while ensuring our decisions remained grounded in user needs.
 
 ## Outcome & Reflection
 
