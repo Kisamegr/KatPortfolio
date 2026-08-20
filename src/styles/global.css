@@ -709,6 +709,10 @@ figcaption {
 .chapter-copy h2 {
   margin-top: 0;
 }
+.chapter-copy > p > img {
+  margin-top: var(--space-3);
+  background: var(--navy-deep);
+}
 .chapter-visuals {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

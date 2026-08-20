@@ -8,16 +8,30 @@ services: ["FigJam", "Figma", "Slack"]
 cover:
   src: "/portfolio-assets/project-covers/wellstreet.png"
   alt: "Wellstreet website displayed on a laptop by a window"
-gallery:
-  - { src: "/portfolio-assets/project-story/wellstreet-workshop.png", alt: "Wellstreet project team working together in a workshop" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0825.jpg", alt: "Wellstreet project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0826.jpg", alt: "Wellstreet project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0850.jpg", alt: "Wellstreet project image" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-19-56-53.png", alt: "Wellstreet screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-22-19.png", alt: "Wellstreet screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-24-29.png", alt: "Wellstreet screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-31-14.png", alt: "Wellstreet screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-33-33.png", alt: "Wellstreet screenshot" }
+chapterImages:
+  - chapter: "brief--challenge"
+    images:
+      - { src: "/portfolio-assets/project-story/wellstreet-workshop.png", alt: "Wellstreet project team working together in a workshop" }
+  - chapter: "research--brand-strategy"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0825.jpg", alt: "Wellstreet brand research material" }
+      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0826.jpg", alt: "Wellstreet brand research material" }
+      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0850.jpg", alt: "Wellstreet brand research material" }
+  - chapter: "from-research-to-direction"
+    images: []
+  - chapter: "visual-exploration--finding-the-right-expression"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-19-56-53.png", alt: "Wellstreet visual exploration" }
+  - chapter: "building-the-brand-system"
+    images: []
+  - chapter: "bringing-the-brand-to-life"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-31-14.png", alt: "Wellstreet brand application" }
+  - chapter: "my-role---facilitator--strategic-contributor"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-33-33.png", alt: "Wellstreet project contribution" }
+  - chapter: "reflection--learning"
+    images: []
 featured: true
 order: 3
 ---
@@ -67,17 +81,27 @@ The selected direction was developed into a cohesive brand system, translating t
 
 Professional, approachable and straightforward — designed to communicate expertise without losing warmth or honesty.
 
+![Wellstreet tone-of-voice guidelines](/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-24-29.png)
+
 ### 02 — Typography + Colour
 
 A distinctive typographic system and restrained colour palette balance personality, clarity, and credibility.
+
+![Wellstreet typography system](/portfolio-assets/project-story/wellstreet-typography.png)
+
+![Wellstreet colour palette](/portfolio-assets/project-story/wellstreet-colour-palette.png)
 
 ### 03 — Photography
 
 Real people and real environments bring a more human and transparent expression to the brand.
 
+![Wellstreet photography guidelines](/portfolio-assets/project-story/wellstreet-photography.png)
+
 ### 04 — Motion
 
 Motion extends the identity digitally, using the angle of the Wellstreet slash to create a recognisable visual language.
+
+![Wellstreet motion guidelines](/portfolio-assets/figma-source/case-study-03-wellstreet/screenshot-2026-08-17-20-22-19.png)
 
 ## Bringing the Brand to Life
 
