@@ -13,7 +13,8 @@ chapterImages:
     images:
       - { src: "/portfolio-assets/project-story/action-society-team.png", alt: "Action Society project team around a meeting table" }
   - chapter: "the-challenge"
-    images: []
+    images:
+      - { src: "/portfolio-assets/project-story/action-society-challenge.png", alt: "Action Society challenge visual" }
   - chapter: "research--understanding-the-system"
     images:
       - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-16-19-18-58.png", alt: "Action Society research and system map" }
@@ -39,15 +40,9 @@ order: 7
 
 ## The Brief
 
-A change management strategy exploring how multiple actors in Skäggetorp could collaborate more effectively and build long-term shared ownership.
+How can multiple actors move from collaboration to shared ownership in practice?
 
-Client: Action Society  
-Role: Project Manager & Research Lead  
-Focus: Change Management · Social Sustainability · Collaboration  
-Framework: Kotter’s 8-Step Change Model  
-Outcome: Collaboration strategy + implementation roadmap
-
-How can multiple actors move from collaboration to shared ownership in practice? What structures and processes support collaboration? What role do leadership and facilitation play? How do group dynamics influence collaboration between organizations?
+What structures and processes support collaboration? What role do leadership and facilitation play? How do group dynamics influence collaboration between organizations?
 
 ## The Challenge
 
