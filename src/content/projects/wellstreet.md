@@ -6,8 +6,8 @@ role: "Facilitator & Strategic Contributor"
 year: 2025
 services: ["FigJam", "Figma", "Slack"]
 cover:
-  src: "/portfolio-assets/figma-source/case-study-03-wellstreet/wellstreet-asset-7399.jpg"
-  alt: "Wellstreet image from the Figma board"
+  src: "/portfolio-assets/project-covers/wellstreet.png"
+  alt: "Wellstreet website displayed on a laptop by a window"
 gallery:
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0825.jpg", alt: "Wellstreet project image" }
   - { src: "/portfolio-assets/figma-source/case-study-03-wellstreet/img-0826.jpg", alt: "Wellstreet project image" }

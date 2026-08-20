@@ -6,8 +6,8 @@ role: "Producer / AR Manager"
 year: 2025
 services: ["FigJam", "Blender", "Unity", "Meadow (AR)", "Max", "Makey Makey / Scratch", "Illustrator", "Photoshop"]
 cover:
-  src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0561.jpg"
-  alt: "AR exhibition image from the Figma board"
+  src: "/portfolio-assets/project-covers/exhibition-digital-development.png"
+  alt: "Black-and-white photograph of the digital development exhibition installation"
 gallery:
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/ios-photo.jpg", alt: "AR exhibition image" }
   - { src: "/portfolio-assets/figma-source/case-study-02-ar-exhibition/img-0411.png", alt: "AR exhibition image" }

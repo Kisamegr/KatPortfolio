@@ -6,8 +6,8 @@ role: "Project Manager"
 year: 2026
 services: ["48-hour sprint", "Miro", "Double Diamond", "AI-mediated roundtable concept"]
 cover:
-  src: "/portfolio-assets/figma-source/case-study-04-all-in/img-2609.jpg"
-  alt: "All In project image from the Figma board"
+  src: "/portfolio-assets/project-covers/miro-all-in.png"
+  alt: "Miro All In game interface displayed on a laptop"
 gallery:
   - { src: "/portfolio-assets/figma-source/case-study-04-all-in/screenshot-2026-08-13-21-33-35.png", alt: "All In screenshot" }
   - { src: "/portfolio-assets/figma-source/case-study-04-all-in/screenshot-2026-08-13-21-53-01.png", alt: "All In screenshot" }

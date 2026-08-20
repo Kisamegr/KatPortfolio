@@ -515,11 +515,13 @@ p {
 .work-index {
   padding-top: var(--space-4);
 }
-.work-index .project-card:nth-child(3n) {
-  grid-column: 2 / span 5;
+.work-index .project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.work-index .project-card:nth-child(4n) {
-  grid-column: span 7;
+.work-index .project-card,
+.work-index .project-card.is-featured,
+.work-index .project-card:nth-child(3n) {
+  grid-column: auto;
 }
 
 /* Case studies */

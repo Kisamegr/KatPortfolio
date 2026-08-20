@@ -6,8 +6,8 @@ role: "Project Manager"
 year: 2025
 services: ["Figma", "Miro", "Trello", "Design Thinking", "Accessibility"]
 cover:
-  src: "/portfolio-assets/figma-source/case-study-01-grocery-navigator/img-0367.png"
-  alt: "Human centered design project image from the Figma board"
+  src: "/portfolio-assets/project-covers/lumo-app.png"
+  alt: "Lumo app displayed on a phone held in a hand"
 chapterImages:
   - chapter: "brief--challenge"
     images: []

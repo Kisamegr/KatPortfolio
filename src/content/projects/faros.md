@@ -6,8 +6,8 @@ role: "Project Coordinator / Producer · Research Lead · UX Strategy"
 year: 2026
 services: ["13 weeks", "4 people", "Parents of children aged 6–10", "Research Lead", "Project Coordination", "Concept Development", "Testing", "Documentation"]
 cover:
-  src: "/portfolio-assets/figma-source/case-study-06-faros/faros-next-to-ipad.jpg"
-  alt: "FAROS image from the Figma board"
+  src: "/portfolio-assets/project-covers/faros.png"
+  alt: "FAROS app displayed on a phone held at a kitchen table"
 gallery:
   - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-asset-14032.jpg", alt: "FAROS project image" }
   - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-06.png", alt: "FAROS screenshot" }
