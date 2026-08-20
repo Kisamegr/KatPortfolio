@@ -74,8 +74,6 @@ This setup allowed visitors to access the AR content easily on their own devices
 - Integrated 3D models, audio, and animations
 - Published each experience through Meadow
 
-This approach ensured consistency and reliability across all designs. The accompanying image shows the QR codes I created so visitors could access the AR interactions during the exhibition. Visitors need the Meadow app on their phones to use the QR codes.
-
 ## Result - Live Exhibition & Working prototype
 
 The final outcome was a fully functioning exhibition installation with interactive AR elements.
@@ -85,6 +83,8 @@ The final outcome was a fully functioning exhibition installation with interacti
 - The project was delivered on time
 
 The exhibition demonstrated how clear structure and coordination support creative and technical work.
+
+This approach ensured consistency and reliability across all designs. The accompanying image shows the QR codes I created so visitors could access the AR interactions during the exhibition. Visitors need the Meadow app on their phones to use the QR codes.
 
 ## Reflection & Learning
 
