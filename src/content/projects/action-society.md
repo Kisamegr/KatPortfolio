@@ -8,13 +8,31 @@ services: ["Change Management", "Social Sustainability", "Collaboration", "Kotte
 cover:
   src: "/portfolio-assets/project-covers/action-society.png"
   alt: "Action Society change-management plan presentation slide"
-gallery:
-  - { src: "/portfolio-assets/figma-source/case-study-07-action-society/action-society-ai-key-visual-upscaled.png", alt: "Action Society change-management key visual" }
-  - { src: "/portfolio-assets/figma-source/case-study-07-action-society/action-society-ai-key-visual.png", alt: "Action Society key visual" }
-  - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-16-19-18-00.png", alt: "Action Society screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-16-19-18-58.png", alt: "Action Society screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-17-09-05-05.png", alt: "Action Society screenshot" }
-  - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-17-19-33-33.png", alt: "Action Society screenshot" }
+chapterImages:
+  - chapter: "the-brief"
+    images:
+      - { src: "/portfolio-assets/project-story/action-society-team.png", alt: "Action Society project team around a meeting table" }
+  - chapter: "the-challenge"
+    images: []
+  - chapter: "research--understanding-the-system"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-16-19-18-58.png", alt: "Action Society research and system map" }
+  - chapter: "reframing-the-challenge"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-16-19-18-00.png", alt: "Action Society challenge reframing" }
+      - { src: "/portfolio-assets/project-story/action-society-crazy-8.png", alt: "Action Society Crazy 8 ideation board" }
+  - chapter: "from-insights-to-strategy"
+    images: []
+  - chapter: "from-strategy-to-change"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-17-09-05-05.png", alt: "Action Society change strategy" }
+  - chapter: "turning-the-framework-into-action"
+    images: []
+  - chapter: "my-contribution"
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-07-action-society/screenshot-2026-08-17-19-33-33.png", alt: "Action Society project coordination" }
+  - chapter: "reflection"
+    images: []
 featured: false
 order: 7
 ---
@@ -72,28 +90,47 @@ Based on our research, we developed a strategy combining digital tools with huma
 
 Dashboards & KPI tracking. Multilingual access. Shared calendar. Activity mapping. Social media integration. AI data visualization features. (A version for actors & for residents)
 
+![Action Society collaboration hub](/portfolio-assets/project-story/action-society-collaboration-hub.png)
+
+### COMMUNICATION PLATFORM
+
+- Slack for daily messaging
+- Different channels → different projects/groups
+- Important updates, resources, or discussions can be shared
+- Action Society as the facilitator
+
+*(Only for actors)*
+
+![Action Society communication platform](/portfolio-assets/project-story/action-society-communication-platform.png)
+
 ### Facebook, LinkedIn and Instagram
 
 Visibility, storytelling, engagement.
 
 **Facebook**
 
-- ✅ Create official page
-- ✅ Invite all project actors
-- ✅ Share project updates weekly
-- ✅ Create discussion posts
+- Create official page
+- Invite all project actors
+- Share project updates weekly
+- Create discussion posts
 
 **LinkedIn**
 
-- ✅ Publish one post per week
-- ✅ Share project learnings
-- ✅ Highlight partnerships
+- Publish one post per week
+- Share project learnings
+- Highlight partnerships
 
 **Instagram**
 
-- ✅ Redesign visual identity
-- ✅ Create templates
-- ✅ Post 2-3 times weekly
+- Redesign visual identity
+- Create templates
+- Post 2–3 times weekly
+
+### WORKSHOPS
+
+- Trust-building activities
+- Shared problem-solving sessions
+- Involving the actors in designing sessions → how can it benefit you?
 
 ## From Strategy to Change
 
