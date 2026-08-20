@@ -843,6 +843,9 @@ figcaption {
 .about-page-title {
   color: var(--pink);
 }
+.about-hero .about-page-title {
+  color: var(--white);
+}
 .about-hero-copy .lede {
   margin-block: var(--space-4) var(--space-5);
 }
