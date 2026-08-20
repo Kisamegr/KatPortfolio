@@ -6,12 +6,22 @@ const contact = page.data.contact!;
 ---
 <BaseLayout title="Connect — Katerina" description={contact.intro} hideFooterCta>
   <section class="shell contact">
-    <span class="eyebrow">{contact.intro}</span><span class="contact-flower" aria-hidden="true">✿</span>
-    <h1>{contact.heading}</h1>
-    <a class="email" href={`mailto:${site.data.email}`}>Email me</a>
-    <a class="phone" href={`tel:${site.data.phone.dial}`}>{site.data.phone.display}</a>
-    <div class="nav">
-      {site.data.socialLinks.map((link) => <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}<span class="sr-only"> (opens in a new tab)</span></a>)}
+    <div class="contact-intro">
+      <span class="eyebrow">{contact.intro}</span>
+      <h1>{contact.heading}</h1>
+      <p class="lede">Whether you’re bringing a new idea to life or looking for a steadier way to move work forward, I’d love to hear from you.</p>
+    </div>
+    <div class="contact-panel">
+      <div class="contact-panel-copy">
+        <span class="eyebrow">Start a conversation</span>
+        <h2>Choose the way that works best for you.</h2>
+        <p>I’m based in Stockholm and always happy to connect about collaborative, creative work.</p>
+      </div>
+      <div class="contact-details">
+        <a class="contact-detail" href={`mailto:${site.data.email}`}><span class="contact-detail-label">Email</span><strong>{site.data.email}</strong><span aria-hidden="true">↗</span></a>
+        <a class="contact-detail" href={`tel:${site.data.phone.dial}`}><span class="contact-detail-label">Phone</span><strong>{site.data.phone.display}</strong><span aria-hidden="true">↗</span></a>
+        {site.data.socialLinks.map((link) => <a class="contact-detail" href={link.url} target="_blank" rel="noopener noreferrer"><span class="contact-detail-label">Social</span><strong>{link.label}</strong><span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>)}
+      </div>
     </div>
   </section>
 </BaseLayout>

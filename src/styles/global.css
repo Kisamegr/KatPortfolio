@@ -1083,49 +1083,74 @@ figcaption {
   font-size: 1.03rem;
 }
 .contact {
-  position: relative;
-  min-height: 70vh;
-  padding-block: var(--space-8);
+  padding-block: var(--space-8) clamp(4rem, 8vw, 8rem);
 }
-.contact .eyebrow {
-  margin-bottom: var(--space-3);
+.contact-intro {
+  max-width: 48rem;
 }
-.contact h1 {
-  position: relative;
-  z-index: 1;
+.contact-intro h1 {
+  max-width: 11ch;
+  margin: var(--space-2) 0 var(--space-4);
 }
-.contact-flower {
-  position: absolute;
-  top: 2rem;
-  right: 3%;
+.contact-intro .lede {
+  margin: 0;
+  color: var(--muted);
+}
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.8fr) minmax(22rem, 1.2fr);
+  gap: clamp(3rem, 8vw, 9rem);
+  align-items: start;
+  margin-top: clamp(4rem, 9vw, 8rem);
+  padding: clamp(2.25rem, 5vw, 4.5rem);
+  background: var(--navy-soft);
+}
+.contact-panel-copy h2 {
+  margin: var(--space-2) 0 var(--space-4);
+  font-size: clamp(2rem, 3.3vw, 3.5rem);
+}
+.contact-panel-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+.contact-details {
+  border-top: 1px solid var(--line);
+}
+.contact-detail {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 0.45fr) minmax(0, 1fr) auto;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: color var(--fast) var(--ease);
+}
+.contact-detail:hover {
   color: var(--pink);
-  font-family: Georgia, serif;
-  font-size: clamp(11rem, 28vw, 22rem);
-  line-height: 1;
-  opacity: 0.12;
 }
-.email,
-.phone {
-  display: block;
-  position: relative;
-  z-index: 1;
-  width: max-content;
-  max-width: 100%;
+.contact-detail-label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.contact-detail strong {
+  min-width: 0;
   font-family: Lora, Georgia, serif;
-  font-size: clamp(1.7rem, 4vw, 4.1rem);
-  line-height: 1.25;
+  font-size: clamp(1.35rem, 2.35vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
 }
-.email {
-  margin-top: var(--space-6);
-  color: var(--lime);
+.contact-detail > span[aria-hidden="true"] {
+  color: var(--pink);
+  font-size: 1.35rem;
+  transition: transform var(--fast) var(--ease);
 }
-.phone {
-  color: var(--white);
-}
-.contact .nav {
-  position: relative;
-  z-index: 1;
-  margin-top: var(--space-5);
+.contact-detail:hover > span[aria-hidden="true"] {
+  transform: translate(3px, -3px);
 }
 @media (min-width: 821px) and (max-width: 1040px) {
   .about-pillars,
@@ -1340,6 +1365,22 @@ figcaption {
   }
   .story-visuals img {
     height: auto;
+  }
+  .contact {
+    padding-block: var(--space-7) var(--space-6);
+  }
+  .contact-panel {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    margin-top: var(--space-7);
+    padding: var(--space-5) var(--space-4);
+  }
+  .contact-detail {
+    grid-template-columns: 1fr auto;
+    gap: var(--space-2);
+  }
+  .contact-detail-label {
+    grid-column: 1 / -1;
   }
   .footer {
     align-items: start;
