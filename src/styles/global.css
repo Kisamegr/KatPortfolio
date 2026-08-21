@@ -408,8 +408,17 @@ p {
 .project-card {
   display: block;
   grid-column: span 5;
+  background: var(--navy-soft);
   color: inherit;
   text-decoration: none;
+  transition:
+    transform var(--standard) var(--ease),
+    box-shadow var(--standard) var(--ease);
+}
+.project-card:hover,
+.project-card:focus-visible {
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.24);
+  transform: translateY(-0.35rem);
 }
 .project-card.is-featured {
   grid-column: span 7;
@@ -432,17 +441,18 @@ p {
 }
 .project-media img {
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition:
     transform 500ms var(--ease),
     filter var(--standard) var(--ease);
 }
 .project-card:hover .project-media img,
 .project-card:focus-visible .project-media img {
+  transform: scale(1.025);
   filter: saturate(1.08);
 }
 .project-card-copy {
-  padding-top: var(--space-3);
+  padding: var(--space-4);
 }
 .project-meta {
   color: var(--muted);
