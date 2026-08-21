@@ -193,9 +193,9 @@ p {
   text-decoration: none;
 }
 .brand-wordmark {
-  width: clamp(9rem, 12vw, 10.5rem);
-  height: clamp(2.8rem, 4vw, 3.5rem);
-  object-fit: cover;
+  width: clamp(4.5rem, 6vw, 5.25rem);
+  height: clamp(4.5rem, 6vw, 5.25rem);
+  object-fit: contain;
   object-position: center;
 }
 .nav {
@@ -1180,8 +1180,8 @@ figcaption {
     font-size: 1.48rem;
   }
   .brand-wordmark {
-    width: 8.25rem;
-    height: 2.75rem;
+    width: 4rem;
+    height: 4rem;
   }
   .menu-toggle {
     display: inline-flex;
