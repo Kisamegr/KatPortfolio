@@ -197,6 +197,8 @@ p {
   height: clamp(4.5rem, 6vw, 5.25rem);
   object-fit: contain;
   object-position: center;
+  transform: scale(1.5);
+  transform-origin: left center;
 }
 .nav {
   display: flex;
