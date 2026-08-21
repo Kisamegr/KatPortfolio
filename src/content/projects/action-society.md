@@ -7,7 +7,7 @@ year: 2026
 services: ["Change Management", "Social Sustainability", "Collaboration", "Kotter’s 8-Step Change Model", "Collaboration strategy + implementation roadmap"]
 cover:
   src: "/portfolio-assets/project-covers/action-society.png"
-  alt: "Action Society change-management plan presentation slide"
+  alt: "Action Society change-management workshop illustration"
 chapterImages:
   - chapter: "the-brief"
     images:

@@ -7,7 +7,7 @@ year: 2026
 services: ["Co-Facilitator", "1h 15min workshop", "6 participants", "Psychological Safety", "Communication", "Team Dynamics"]
 cover:
   src: "/portfolio-assets/project-covers/psychological-safety-workshop.png"
-  alt: "Presentation slide introducing the psychological safety and communication styles workshop"
+  alt: "Psychological safety workshop cover with overlapping profiles"
 gallery:
   - { src: "/portfolio-assets/figma-source/case-study-05-workshop/workshop-photo-8809.jpg", alt: "Psychological safety workshop materials" }
   - { src: "/portfolio-assets/figma-source/case-study-05-workshop/workshop-photo-8850.jpg", alt: "Psychological safety workshop image" }
