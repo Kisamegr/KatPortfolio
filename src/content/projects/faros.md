@@ -10,7 +10,8 @@ cover:
   alt: "FAROS app displayed on a phone held at a kitchen table"
 chapterImages:
   - chapter: "project-overview"
-    images: []
+    images:
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-asset-14032.jpg", alt: "FAROS concept prototype" }
   - chapter: "brief"
     images: []
   - chapter: "challenge"
@@ -23,13 +24,9 @@ chapterImages:
       - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-21-39-49.png", alt: "FAROS quantitative research" }
       - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-21-39-20.png", alt: "FAROS qualitative analysis" }
   - chapter: "exploring-the-solution-with-low-fidelity-prototypes"
-    images:
-      - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-asset-14032.jpg", alt: "FAROS low-fidelity prototype" }
-      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-06.png", alt: "FAROS low-fidelity prototype" }
+    images: []
   - chapter: "testing--iteration"
-    images:
-      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-33.png", alt: "FAROS testing insight" }
-      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-09-06-58-49.png", alt: "FAROS testing insight" }
+    images: []
   - chapter: "refining-the-concept"
     images:
       - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-03-12-13-19-53.png", alt: "FAROS refined concept" }
@@ -38,9 +35,10 @@ chapterImages:
   - chapter: "meet-faros"
     images:
       - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-22-21-01.png", alt: "FAROS parent app" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-22-25-12.png", alt: "FAROS lamp concept" }
   - chapter: "beyond-the-screen-the-faros-lamp"
     images:
-      - { src: "/portfolio-assets/figma-source/case-study-06-faros/screenshot-2026-04-22-22-25-12.png", alt: "FAROS lamp concept" }
+      - { src: "/portfolio-assets/figma-source/case-study-06-faros/faros-next-to-ipad.jpg", alt: "FAROS physical companion beside an iPad" }
   - chapter: "outcome--reflection"
     images: []
 featured: false
@@ -93,13 +91,19 @@ We started broad, exploring how parents navigate children’s digital lives befo
 
 Shared playtime planning and routines.
 
+![FAROS parent-child check-in prototype](/portfolio-assets/project-story/faros-parent-child-check-in.png)
+
 ### 02 Parent Alignment Platform
 
 Shared guidance between parents and schools.
 
+![FAROS parent alignment prototype](/portfolio-assets/project-story/faros-parent-alignment-platform.png)
+
 ### 03 Gaming Guide
 
 Quick, trustworthy guidance about games.
+
+![FAROS gaming guide prototype](/portfolio-assets/project-story/faros-gaming-guide.png)
 
 ### Choosing a direction
 
